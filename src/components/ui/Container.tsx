@@ -1,0 +1,26 @@
+import React from 'react';
+
+interface ContainerProps {
+  children: React.ReactNode;
+  className?: string;
+  size?: 'normal' | 'small' | 'large' | 'full';
+}
+
+export default function Container({
+  children,
+  className = '',
+  size = 'normal',
+}: ContainerProps) {
+  const sizeClasses = {
+    small: 'max-w-4xl',
+    normal: 'max-w-7xl',
+    large: 'max-w-[1400px]',
+    full: 'max-w-full',
+  };
+
+  return (
+    <div className={`mx-auto px-4 sm:px-6 lg:px-8 w-full ${sizeClasses[size]} ${className}`}>
+      {children}
+    </div>
+  );
+}
