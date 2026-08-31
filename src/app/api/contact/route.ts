@@ -1,7 +1,13 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.GMAIL_USER,
+    pass: process.env.GMAIL_APP_PASSWORD,
+  },
+});
 
 export async function POST(request: Request) {
   try {
@@ -25,14 +31,20 @@ export async function POST(request: Request) {
       );
     }
 
-    const { data, error } = await resend.emails.send({
-      from: 'Being Fit Website <onboarding@resend.dev>',
-      to: ['ranipaliwal@gmail.com'],
-      ...(email ? { replyTo: email } : {}),
+    await transporter.sendMail({
+      // Client ki Gmail se email jayegi
+      from: `Rani Paliwal <${process.env.GMAIL_USER}>`,
+
+      // Client ko email receive hogi
+      to: process.env.GMAIL_USER,
+
+      // Client Reply karega to user ko reply jayega
+      replyTo: email || undefined,
+
       subject: `New Consultation Inquiry - ${fullName}`,
 
       html: `
-        <div style="font-family: Arial, sans-serif; color: #17251d; line-height: 1.6;">
+        <div style="font-family: Arial, sans-serif; color: #17251d; line-height: 1.6; max-width: 700px; margin: 0 auto;">
 
           <h2 style="color: #0F5132;">
             New Consultation Inquiry
@@ -74,12 +86,14 @@ export async function POST(request: Request) {
             <strong>Message:</strong>
           </p>
 
-          <div style="
-            background: #f4faf6;
-            padding: 16px;
-            border-radius: 10px;
-            border: 1px solid #d8eee0;
-          ">
+          <div
+            style="
+              background: #f4faf6;
+              padding: 16px;
+              border-radius: 10px;
+              border: 1px solid #d8eee0;
+            "
+          >
             ${message || 'No message provided'}
           </div>
 
@@ -93,22 +107,10 @@ export async function POST(request: Request) {
       `,
     });
 
-    if (error) {
-      console.error('Resend Error:', error);
-
-      return NextResponse.json(
-        {
-          error: error.message,
-        },
-        { status: 500 }
-      );
-    }
-
     return NextResponse.json(
       {
         success: true,
         message: 'Inquiry sent successfully.',
-        data,
       },
       { status: 200 }
     );

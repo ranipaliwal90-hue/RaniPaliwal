@@ -31,20 +31,22 @@ export default function ContactForm() {
   const validate = (): boolean => {
     const newErrors: Partial<FormData> = {};
 
+    // Full Name
     if (!formData.fullName.trim()) {
       newErrors.fullName = 'Full name is required';
     }
 
+    // Phone
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
     } else if (!/^[0-9+\s-]{8,15}$/.test(formData.phone)) {
       newErrors.phone = 'Please enter a valid phone number';
     }
 
-    if (
-      formData.email &&
-      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
-    ) {
+    // Email - REQUIRED
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email address is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
 
@@ -224,6 +226,8 @@ export default function ContactForm() {
             {/* PHONE & EMAIL */}
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {/* PHONE */}
+
               <div>
                 <label
                   htmlFor="phone"
@@ -258,12 +262,14 @@ export default function ContactForm() {
                 )}
               </div>
 
+              {/* EMAIL */}
+
               <div>
                 <label
                   htmlFor="email"
                   className="mb-2 block text-xs font-extrabold uppercase tracking-wider text-gray-700"
                 >
-                  Email Address (Optional)
+                  Email Address <span className="text-red-500">*</span>
                 </label>
 
                 <input
@@ -296,6 +302,8 @@ export default function ContactForm() {
             {/* GOAL & PROGRAM */}
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {/* GOAL */}
+
               <div>
                 <label
                   htmlFor="goal"
@@ -332,6 +340,8 @@ export default function ContactForm() {
                   </option>
                 </select>
               </div>
+
+              {/* PROGRAM */}
 
               <div>
                 <label
@@ -400,9 +410,7 @@ export default function ContactForm() {
               />
             </div>
 
-            {/* ==================================================
-                RESPONSIVE SUBMIT BUTTON
-            ================================================== */}
+            {/* SUBMIT BUTTON */}
 
             <button
               type="submit"
@@ -448,7 +456,6 @@ export default function ContactForm() {
                 </>
               )}
             </button>
-
           </motion.form>
         )}
       </AnimatePresence>

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -44,11 +45,7 @@ export default function Navbar() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  /*
-   * ============================================================
-   * MOBILE BOTTOM NAVIGATION
-   * ============================================================
-   */
+
   const mobileBottomNav = [
     {
       label: 'Home',
@@ -87,6 +84,7 @@ export default function Navbar() {
       {/* =========================================================
           TOP NAVBAR
       ========================================================== */}
+
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           isScrolled
@@ -100,11 +98,13 @@ export default function Navbar() {
             {/* =================================================
                 BRAND
             ================================================== */}
+
             <Link
               href="/"
               className="group relative z-50 flex min-w-0 shrink-0 items-center gap-2.5"
             >
-              {/* RP */}
+              {/* RANI PALIWAL LOGO */}
+
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{
@@ -112,14 +112,20 @@ export default function Navbar() {
                   stiffness: 400,
                   damping: 20,
                 }}
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#0F5132] shadow-[0_6px_18px_rgba(15,81,50,0.18)]"
+                className="relative flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-[0_6px_18px_rgba(15,81,50,0.18)] ring-1 ring-emerald-100"
               >
-                <span className="text-base font-black tracking-tight text-lime-400">
-                  RP
-                </span>
+                <Image
+                  src="/ranilogo.jpg"
+                  alt="Rani Paliwal - Being Fit"
+                  fill
+                  priority
+                  sizes="44px"
+                  className="object-cover"
+                />
               </motion.div>
 
               {/* Brand Text */}
+
               <div className="flex min-w-0 flex-col">
                 <span className="whitespace-nowrap text-[20px] font-extrabold leading-none tracking-[-0.03em] text-[#0F241A] transition-colors duration-200 group-hover:text-[#0F5132]">
                   Rani Paliwal
@@ -134,6 +140,7 @@ export default function Navbar() {
             {/* =================================================
                 DESKTOP NAV
             ================================================== */}
+
             <div className="hidden min-w-0 flex-1 items-center justify-center lg:flex">
               <div className="flex min-w-0 items-center gap-0">
 
@@ -157,6 +164,7 @@ export default function Navbar() {
                       </span>
 
                       {/* Active dot */}
+
                       {isActive && (
                         <motion.span
                           layoutId="navbar-active"
@@ -170,6 +178,7 @@ export default function Navbar() {
                       )}
 
                       {/* Hover line */}
+
                       {!isActive && (
                         <span className="absolute bottom-1 left-1/2 h-px w-0 -translate-x-1/2 bg-emerald-600 transition-all duration-300 group-hover:w-4" />
                       )}
@@ -183,9 +192,11 @@ export default function Navbar() {
             {/* =================================================
                 RIGHT ACTIONS
             ================================================== */}
+
             <div className="hidden shrink-0 items-center gap-2 lg:flex">
 
               {/* Phone */}
+
               <a
                 href={`tel:${BRAND_INFO.phone}`}
                 aria-label={`Call ${BRAND_INFO.displayPhone}`}
@@ -199,6 +210,7 @@ export default function Navbar() {
               </a>
 
               {/* Consultation */}
+
               <Link
                 href="/contact"
                 className="group flex h-10 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-[#0F5132] px-3.5 text-[12px] font-bold text-white shadow-[0_7px_20px_rgba(15,81,50,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0B4329] hover:shadow-[0_10px_24px_rgba(15,81,50,0.24)] xl:px-4 xl:text-[13px]"
@@ -217,6 +229,7 @@ export default function Navbar() {
             {/* =================================================
                 MOBILE MENU BUTTON
             ================================================== */}
+
             <motion.button
               whileTap={{ scale: 0.94 }}
               onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -259,6 +272,7 @@ export default function Navbar() {
         {/* =========================================================
             EXISTING MOBILE MENU
         ========================================================== */}
+
         <AnimatePresence>
           {mobileMenuOpen && (
             <motion.div
@@ -326,6 +340,7 @@ export default function Navbar() {
                 </div>
 
                 {/* Mobile Actions */}
+
                 <motion.div
                   initial={{
                     opacity: 0,
@@ -373,6 +388,7 @@ export default function Navbar() {
           HOME / ABOUT / PROGRAMS / BECOME A COACH /
           BEING FIT / CONTACT
       ========================================================== */}
+
       <nav
         className="
           fixed
@@ -439,6 +455,7 @@ export default function Navbar() {
                 >
 
                   {/* Icon */}
+
                   <Icon
                     className={`
                       h-[18px]
@@ -457,6 +474,7 @@ export default function Navbar() {
                   />
 
                   {/* Label */}
+
                   <span
                     className={`
                       w-full
@@ -477,6 +495,7 @@ export default function Navbar() {
                   </span>
 
                   {/* Active Indicator */}
+
                   {isActive && (
                     <motion.span
                       layoutId="mobile-bottom-active"
