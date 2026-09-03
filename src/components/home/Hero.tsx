@@ -41,7 +41,6 @@ export default function Hero() {
 
   return (
     <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-radial-glow">
-
       {/* Background Floating Decorative Leaves */}
       <LeafDecoration
         size="lg"
@@ -55,14 +54,11 @@ export default function Hero() {
       />
 
       <Container size="large">
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-
           {/* =====================================================
-              LEFT COLUMN
+              LEFT COLUMN: RANI PALIWAL PRIMARY HERO CONTENT
           ===================================================== */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
-
             {/* 1. Badge */}
             <motion.div
               {...getMotionProps(0.1, -12)}
@@ -70,11 +66,9 @@ export default function Hero() {
             >
               <Badge
                 variant="green"
-                icon={
-                  <Award className="w-3.5 h-3.5" />
-                }
+                icon={<Award className="w-3.5 h-3.5" />}
               >
-                12+ YEARS OF EXPERIENCE • ASN CERTIFIED
+                12+ YEARS OF EXPERIENCE
               </Badge>
             </motion.div>
 
@@ -94,9 +88,7 @@ export default function Hero() {
               "
             >
               <span className="relative inline-block text-gradient-brand">
-
                 Transform
-
                 <svg
                   className="
                     absolute
@@ -117,15 +109,8 @@ export default function Hero() {
                     fill="none"
                   />
                 </svg>
-
-              </span>
-
-              {' '}
-              Your Body.
-
-              <br className="hidden sm:inline" />
-
-              {' '}
+              </span>{' '}
+              Your Body. <br className="hidden sm:inline" />
               Transform Your Life.
             </motion.h1>
 
@@ -137,7 +122,6 @@ export default function Hero() {
               <h2 className="text-xl sm:text-2xl font-extrabold text-[#0F5132] tracking-tight">
                 Rani Paliwal
               </h2>
-
               <p className="text-xs sm:text-sm font-bold text-emerald-700 uppercase tracking-wide mt-0.5">
                 ASN Certified Coach & Health and Wellness Consultant
               </p>
@@ -208,9 +192,7 @@ export default function Hero() {
                 sm:w-auto
               "
             >
-
               <div className="flex -space-x-3 overflow-hidden">
-
                 <div
                   className="
                     w-10
@@ -267,11 +249,9 @@ export default function Hero() {
                 >
                   <Star className="w-3.5 h-3.5 fill-lime-400" />
                 </div>
-
               </div>
 
               <div className="flex flex-col">
-
                 <span
                   className="
                     font-extrabold
@@ -283,24 +263,20 @@ export default function Hero() {
                   "
                 >
                   10,000+ Transformations
-
                   <ShieldCheck className="w-4 h-4 text-emerald-600 inline" />
                 </span>
 
                 <span className="text-xs text-gray-500 font-medium">
                   Udaipur & Global 1-on-1 Online Coaching
                 </span>
-
               </div>
-
             </motion.div>
           </div>
 
           {/* =====================================================
-              RIGHT COLUMN - HERO IMAGE
+              RIGHT COLUMN: RANI PALIWAL PORTRAIT VISUAL
           ===================================================== */}
           <div className="lg:col-span-5 relative">
-
             <motion.div
               initial={
                 shouldReduceMotion
@@ -326,7 +302,6 @@ export default function Hero() {
                 lg:max-w-none
               "
             >
-
               {/* Subtle Green Glow */}
               <div
                 className="
@@ -341,9 +316,7 @@ export default function Hero() {
                 "
               />
 
-              {/* =================================================
-                  MAIN ROUNDED IMAGE FRAME
-              ================================================= */}
+              {/* Main Rounded Image Frame */}
               <div
                 className="
                   relative
@@ -356,7 +329,6 @@ export default function Hero() {
                   group
                 "
               >
-
                 <Image
                   src="/ranii.jpg"
                   alt="Coach Rani Paliwal Health & Wellness Consultant"
@@ -391,107 +363,9 @@ export default function Hero() {
                   "
                 />
 
-                {/* =================================================
-                    ASN CERTIFIED FLOATING BADGE
-                ================================================= */}
-                <motion.div
-                  initial={
-                    shouldReduceMotion
-                      ? {}
-                      : {
-                          opacity: 0,
-                          x: 16,
-                        }
-                  }
-                  animate={{
-                    opacity: 1,
-                    x: 0,
-                  }}
-                  transition={{
-                    delay: 0.6,
-                    duration: 0.5,
-                  }}
-                  className="
-                    absolute
+          
 
-                    /* MOBILE */
-                    top-4
-                    right-[-8px]
-
-                    /* TABLET */
-                    sm:top-5
-                    sm:right-3
-
-                    /* DESKTOP */
-                    lg:top-7
-                    lg:-right-7
-
-                    glass-card
-
-                    px-2.5
-                    py-1.5
-
-                    sm:px-4
-                    sm:py-2.5
-
-                    rounded-2xl
-
-                    flex
-                    items-center
-
-                    gap-2
-                    sm:gap-3
-
-                    shadow-lg
-                    border
-                    border-white/80
-
-                    z-30
-                    whitespace-nowrap
-                  "
-                >
-
-                  {/* Badge Icon */}
-                  <div
-                    className="
-                      w-7
-                      h-7
-
-                      sm:w-9
-                      sm:h-9
-
-                      rounded-xl
-                      bg-emerald-600
-                      text-white
-
-                      flex
-                      items-center
-                      justify-center
-
-                      font-bold
-                      text-sm
-                      shrink-0
-                    "
-                  >
-                    <Sparkles className="w-3.5 h-3.5 sm:w-5 sm:h-5" />
-                  </div>
-
-                  {/* Badge Text */}
-                  <div>
-                    <p className="text-[10px] sm:text-xs font-bold text-gray-900">
-                      ASN Certified
-                    </p>
-
-                    <p className="text-[8px] sm:text-[10px] text-emerald-700 font-semibold">
-                      Nutrition & Wellness
-                    </p>
-                  </div>
-
-                </motion.div>
-
-                {/* =================================================
-                    TRANSFORMATIONS FLOATING CARD
-                ================================================= */}
+                {/* Transformations Floating Card */}
                 <motion.div
                   animate={
                     shouldReduceMotion
@@ -509,34 +383,24 @@ export default function Hero() {
                     absolute
                     bottom-5
                     left-4
-
                     sm:bottom-6
                     sm:left-6
-
                     glass-card
-
                     px-4
                     py-3
-
                     sm:px-5
                     sm:py-3.5
-
                     rounded-2xl
-
                     flex
                     items-center
-
                     gap-3
                     sm:gap-3.5
-
                     shadow-xl
                     border
                     border-white/90
-
                     z-20
                   "
                 >
-
                   <div
                     className="
                       w-10
@@ -562,22 +426,17 @@ export default function Hero() {
                     <p className="text-sm sm:text-base font-black text-gray-900 leading-tight">
                       10,000+
                     </p>
-
                     <p className="text-[10px] sm:text-xs text-emerald-800 font-bold">
                       Transformations
                     </p>
                   </div>
-
                 </motion.div>
-
               </div>
             </motion.div>
           </div>
         </div>
 
-        {/* =====================================================
-            SCROLL INDICATOR
-        ===================================================== */}
+        {/* Scroll Indicator */}
         <motion.div
           initial={
             shouldReduceMotion
@@ -608,7 +467,6 @@ export default function Hero() {
           "
         >
           <span>Scroll to explore</span>
-
           <motion.div
             animate={
               shouldReduceMotion
@@ -625,9 +483,7 @@ export default function Hero() {
           >
             <ChevronDown className="w-4 h-4 text-emerald-600 mt-1" />
           </motion.div>
-
         </motion.div>
-
       </Container>
     </section>
   );

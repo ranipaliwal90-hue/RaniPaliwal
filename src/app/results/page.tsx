@@ -2,7 +2,6 @@ import React from 'react';
 import type { Metadata } from 'next';
 import PageTransition from '@/components/animations/PageTransition';
 import TransformationGallery from '@/components/results/TransformationGallery';
-import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata: Metadata = {
   title: 'Transformation Gallery & Results | Coach Rani Paliwal',
@@ -10,11 +9,10 @@ export const metadata: Metadata = {
     'Explore authentic before and after weight loss, weight gain, and fitness transformations of clients coached by ASN Certified Nutritionist Rani Paliwal.',
 };
 
-export default function TransformationsPage() {
+export default function ResultsPage() {
   return (
     <PageTransition>
       <TransformationGallery />
-      <FinalCTA />
     </PageTransition>
   );
 }

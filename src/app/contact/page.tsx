@@ -1,17 +1,17 @@
 import type { Metadata } from 'next';
 import {
-  Phone,
   MapPin,
   MessageCircle,
-  Clock,
   ArrowUpRight,
   Sparkles,
+  Navigation,
 } from 'lucide-react';
 
 import {
   InstagramIcon,
   FacebookIcon,
 } from '@/components/ui/SocialIcons';
+import { RiWhatsappLine, RiYoutubeFill } from 'react-icons/ri';
 
 import PageTransition from '@/components/animations/PageTransition';
 import Container from '@/components/ui/Container';
@@ -66,10 +66,78 @@ export default function ContactPage() {
                 with Coach Rani Paliwal.
               </p>
 
+              {/* =================================================
+                  SOCIAL LINKS — TOP
+              ================================================== */}
+              <div className="mt-8 flex flex-col items-center">
+                <p className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.16em] text-emerald-700">
+                  Follow Rani&apos;s Journey
+                </p>
+
+                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
+                  <a
+                    href="https://instagram.com/rani_paliwal?r=nametag"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Rani Paliwal Instagram"
+                    title="Instagram"
+                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+                  >
+                    <InstagramIcon className="h-7 w-7 sm:h-8 sm:w-8" />
+                  </a>
+
+                  <a
+                    href="https://www.facebook.com/beingfit.asia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Being Fit Facebook"
+                    title="Facebook"
+                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+                  >
+                    <FacebookIcon className="h-7 w-7 sm:h-8 sm:w-8" />
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/rani-paliwal-4164b670/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Rani Paliwal LinkedIn"
+                    title="LinkedIn"
+                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+                  >
+                    <span className="text-lg font-black sm:text-xl">in</span>
+                  </a>
+
+                  <a
+                    href="https://www.youtube.com/@ranipaliwal3200"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Rani Paliwal YouTube"
+                    title="YouTube"
+                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+                  >
+                    <RiYoutubeFill className="h-8 w-8 sm:h-9 sm:w-9" />
+                  </a>
+
+                  {/* WhatsApp */}
+                  <a
+                    href={BRAND_INFO.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Chat with Rani Paliwal on WhatsApp"
+                    title="WhatsApp"
+                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-emerald-600 shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-600 hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+                  >
+                    <RiWhatsappLine className="h-8 w-8 sm:h-9 sm:w-9" />
+                  </a>
+                </div>
+              </div>
+
             </div>
 
           </Container>
         </section>
+
 
         {/* =========================================================
             MAIN CONTACT SECTION
@@ -78,109 +146,73 @@ export default function ContactPage() {
 
           <Container size="large">
 
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+
 
               {/* =====================================================
-                  LEFT SIDE
+                  LEFT SIDE — MAP & INFO
               ====================================================== */}
-              <div className="lg:col-span-5">
+            <div className="order-2 lg:order-1 lg:col-span-5">
 
-                <div className="mb-8">
+                <div className="mb-7">
 
                   <p className="mb-2 text-xs font-extrabold uppercase tracking-[0.18em] text-emerald-700">
-                    Let&apos;s Connect
+                    Visit Us
                   </p>
 
                   <h2 className="text-3xl font-extrabold tracking-tight text-[#0F241A] sm:text-4xl">
-                    Ready to take the
+                    Find Us in
                     <span className="block text-gradient-brand">
-                      first step?
+                      Udaipur
                     </span>
                   </h2>
 
                   <p className="mt-4 max-w-md text-sm leading-7 text-gray-600 sm:text-base">
-                    Whether you&apos;re looking for personalized nutrition,
-                    fitness coaching, online guidance, or group fitness,
-                    reach out and let&apos;s discuss your goals.
+                    Visit Being Fit Nutrition & Fitness Club in
+                    Bhuwana, Udaipur for personalized fitness and
+                    wellness guidance.
                   </p>
 
                 </div>
 
+
                 {/* =================================================
-                    CONTACT DETAILS
+                    GOOGLE MAP
                 ================================================== */}
-                <div className="space-y-3">
+                <div className="overflow-hidden rounded-[28px] border border-emerald-100 bg-white shadow-[0_20px_60px_rgba(15,81,50,0.10)]">
 
-                  {/* Phone */}
-                  <a
-                    href={`tel:${BRAND_INFO.phone}`}
-                    className="group flex items-center gap-4 rounded-2xl border border-emerald-100 bg-[#F6FBF7] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-50 hover:shadow-lg"
-                  >
+                  <div className="relative h-[360px] w-full sm:h-[420px] lg:h-[460px]">
 
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0F5132] text-lime-400 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                      <Phone className="h-5 w-5" />
-                    </div>
+                    <iframe
+                      title="Rani Paliwal Location - Udaipur"
+                      src="https://www.google.com/maps?q=24.6181869,73.6965305&z=18&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{
+                        border: 0,
+                      }}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      allowFullScreen
+                    />
 
-                    <div className="min-w-0 flex-1">
+                  </div>
 
-                      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-emerald-700">
-                        Phone
-                      </p>
+                </div>
 
-                      <p className="mt-0.5 text-base font-bold text-[#0F241A]">
-                        {BRAND_INFO.displayPhone}
-                      </p>
 
-                      <p className="text-xs text-gray-500">
-                        Available Mon–Sat for consultations
-                      </p>
+                {/* =================================================
+                    LOCATION INFO
+                ================================================== */}
+                <div className="mt-4 rounded-2xl border border-emerald-100 bg-[#F6FBF7] p-4">
 
-                    </div>
+                  <div className="flex items-start gap-3">
 
-                    <ArrowUpRight className="h-4 w-4 text-emerald-600 opacity-0 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
-
-                  </a>
-
-                  {/* WhatsApp */}
-                  <a
-                    href={BRAND_INFO.whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-4 rounded-2xl border border-emerald-100 bg-[#F6FBF7] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-emerald-200 hover:bg-emerald-50 hover:shadow-lg"
-                  >
-
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white shadow-sm transition-transform duration-300 group-hover:scale-105">
-                      <MessageCircle className="h-5 w-5" />
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-
-                      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-emerald-700">
-                        WhatsApp
-                      </p>
-
-                      <p className="mt-0.5 text-base font-bold text-[#0F241A]">
-                        Chat with Coach Rani
-                      </p>
-
-                      <p className="text-xs text-gray-500">
-                        Direct 1-on-1 coaching inquiry
-                      </p>
-
-                    </div>
-
-                    <ArrowUpRight className="h-4 w-4 text-emerald-600 opacity-0 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" />
-
-                  </a>
-
-                  {/* Location */}
-                  <div className="flex items-center gap-4 rounded-2xl border border-emerald-100 bg-[#F6FBF7] p-4">
-
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0F5132] text-lime-400 shadow-sm">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#0F5132] text-lime-400">
                       <MapPin className="h-5 w-5" />
                     </div>
 
-                    <div>
+                    <div className="min-w-0 flex-1">
 
                       <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-emerald-700">
                         Location
@@ -190,114 +222,43 @@ export default function ContactPage() {
                         Udaipur, Rajasthan
                       </p>
 
-                      <p className="text-xs text-gray-500">
-                        Associated with Being Fit Club, Bhuwana
+                      <p className="text-xs leading-relaxed text-gray-500">
+                       Being Fit, Near Shrinath Hospital, Navratna Complex, Pulla Bhuwana, Mahaveer Colony Park, Udaipur, Rajasthan 313011
                       </p>
 
                     </div>
 
                   </div>
 
-                  {/* Hours */}
-                  <div className="flex items-center gap-4 rounded-2xl border border-emerald-100 bg-[#F6FBF7] p-4">
 
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0F5132] text-lime-400 shadow-sm">
-                      <Clock className="h-5 w-5" />
-                    </div>
+                  {/* GET DIRECTIONS */}
+                  <a
+                    href="https://www.google.com/maps/place/Herbalife+Udaipur+%7C+Herbalife+Products+%7C+Weight+Gain+Weight+Loss+Udaipur/@24.6182918,73.6961858,18z/data=!4m6!3m5!1s0x3967e5bdca5efde5:0xfbb2374d5b5a0765!8m2!3d24.6181869!4d73.6965305!16s%2Fg%2F11gcfqr1t7?hl=en-in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-[#8BC52B] px-5 py-3 text-sm font-extrabold text-white shadow-[0_8px_20px_rgba(139,197,43,0.20)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#79AF20] hover:shadow-[0_12px_25px_rgba(139,197,43,0.28)]"
+                  >
 
-                    <div>
+                    <Navigation className="h-4 w-4" />
 
-                      <p className="text-[10px] font-extrabold uppercase tracking-[0.14em] text-emerald-700">
-                        Consultation Hours
-                      </p>
+                    <span>
+                      Get Directions
+                    </span>
 
-                      <p className="mt-0.5 text-sm font-bold text-[#0F241A]">
-                        Mon – Sat: 5:30 AM – 10:30 PM
-                      </p>
+                    <ArrowUpRight className="h-4 w-4" />
 
-                      <p className="text-xs font-semibold text-gray-500">
-                        Sunday: 8:00 AM – 12:00 PM
-                      </p>
-
-                    </div>
-
-                  </div>
+                  </a>
 
                 </div>
 
-                {/* =================================================
-                    SOCIAL LINKS — LOGO ONLY
-                ================================================== */}
-                <div className="mt-8 border-t border-emerald-100 pt-6">
-
-                  <p className="mb-4 text-[10px] font-extrabold uppercase tracking-[0.16em] text-gray-500">
-                    Follow Rani&apos;s Journey
-                  </p>
-
-                  <div className="flex items-center gap-3">
-
-                    {/* Instagram */}
-                    <a
-                      href="https://instagram.com/rani_paliwal?r=nametag"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Rani Paliwal Instagram"
-                      title="Instagram"
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg"
-                    >
-                      <InstagramIcon className="h-5 w-5" />
-                    </a>
-
-                    {/* Facebook */}
-                    <a
-                      href="https://www.facebook.com/beingfit.asia"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Being Fit Facebook"
-                      title="Facebook"
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg"
-                    >
-                      <FacebookIcon className="h-5 w-5" />
-                    </a>
-
-                    {/* LinkedIn */}
-                    <a
-                      href="https://www.linkedin.com/in/rani-paliwal-4164b670/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Rani Paliwal LinkedIn"
-                      title="LinkedIn"
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg"
-                    >
-                      <span className="text-sm font-black">
-                        in
-                      </span>
-                    </a>
-
-                    {/* YouTube */}
-                    <a
-                      href="https://www.youtube.com/@ranipaliwal3200"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Rani Paliwal YouTube"
-                      title="YouTube"
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg"
-                    >
-                      <span className="text-sm font-black">
-                        ▶
-                      </span>
-                    </a>
-
-                  </div>
-
-                </div>
 
               </div>
+
 
               {/* =====================================================
                   RIGHT SIDE — CONTACT FORM
               ====================================================== */}
-              <div className="lg:col-span-7">
+             <div className="order-1 lg:order-2 lg:col-span-7">
 
                 <div className="relative overflow-hidden rounded-[32px] border border-emerald-100 bg-[#F6FBF7] p-5 shadow-[0_20px_60px_rgba(15,81,50,0.08)] sm:p-7 lg:p-8">
 
@@ -344,6 +305,7 @@ export default function ContactPage() {
 
         </section>
 
+
         {/* =========================================================
             BOTTOM CTA
         ========================================================== */}
@@ -366,14 +328,16 @@ export default function ContactPage() {
               </div>
 
               <a
-                href={`tel:${BRAND_INFO.phone}`}
+                href={BRAND_INFO.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex shrink-0 items-center gap-3 rounded-full bg-[#0F5132] px-5 py-3 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0B4329] hover:shadow-xl"
               >
 
-                <Phone className="h-4 w-4 text-lime-400" />
+                <MessageCircle className="h-4 w-4 text-lime-400" />
 
                 <span className="whitespace-nowrap">
-                  {BRAND_INFO.displayPhone}
+                  Chat on WhatsApp
                 </span>
 
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

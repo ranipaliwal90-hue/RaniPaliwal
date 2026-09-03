@@ -126,11 +126,6 @@ export default function BecomeACoach() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center">
-          <Button href="/contact" variant="primary" size="lg" showArrow>
-            Apply to Become a Coach
-          </Button>
-        </div>
       </Container>
     </section>
   );

@@ -5,8 +5,9 @@ export interface NavItem {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', href: '/' },
-  { label: 'About Rani', href: '/about' },
-  { label: 'Programs', href: '/programs' },
+  { label: 'About', href: '/about' },
+  { label: 'Transformations', href: '/results' },
+   { label: 'Services', href: '/programs' },
   { label: 'Become a Coach', href: '/become-a-coach' },
   { label: 'Being Fit', href: '/being-fit' },
   { label: 'Contact', href: '/contact' },
@@ -23,7 +24,7 @@ export const BRAND_INFO = {
   phone: '+91 9982011555',
   displayPhone: '+91 99820 11555',
   website: 'ranipaliwal.com',
-  whatsappUrl: 'https://wa.me/919982011555?text=Hello%20Coach%20Rani,%20I%20want%20to%20apply%20to%20become%20a%20coach%20and%20join%20your%20team.',
+  whatsappUrl: 'https://wa.me/919982011555?text=Hello%20Coach%20Rani,%20I%20saw%20your%20transformation%20gallery%20and%20would%20like%20a%20personal%20consultation.',
   personalInstagram: '@rani_paliwal',
   personalInstagramUrl: 'https://instagram.com/rani_paliwal',
   brandInstagram: '@beingfit5112',

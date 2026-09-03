@@ -10,8 +10,6 @@ import LeafDecoration from '@/components/ui/LeafDecoration';
 import FadeUp from '@/components/animations/FadeUp';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
-import Philosophy from '@/components/home/Philosophy';
-import FinalCTA from '@/components/home/FinalCTA';
 
 export const metadata: Metadata = {
   title: 'Meet Rani Paliwal | Health, Fitness & Nutrition Coach',
@@ -91,10 +89,6 @@ export default function AboutPage() {
 
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center gap-2 text-sm font-bold text-[#0F5132] bg-emerald-50 px-4 py-2 rounded-full border border-emerald-100">
-                  <Shield className="w-4 h-4 text-emerald-600" />
-                  <span>ASN Certified Coach</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm font-bold text-[#0F5132] bg-emerald-50 px-4 py-2 rounded-full border border-emerald-100">
                   <Award className="w-4 h-4 text-emerald-600" />
                   <span>10,000+ Client Transformations</span>
                 </div>
@@ -115,18 +109,11 @@ export default function AboutPage() {
                   className="w-full h-[480px] object-cover object-top"
                   priority
                 />
-                <div className="absolute bottom-6 left-6 right-6 glass-card p-4 rounded-2xl border border-white/90">
-                  <p className="text-sm font-extrabold text-[#0F5132]">Rani Paliwal</p>
-                  <p className="text-xs text-gray-600 font-medium">ASN Certified Coach • Udaipur, Rajasthan</p>
-                </div>
               </div>
             </div>
           </div>
         </Container>
       </section>
-
-      {/* Philosophy Component */}
-      <Philosophy />
 
       {/* Expertise */}
       <section className="py-20 bg-white">
@@ -155,35 +142,6 @@ export default function AboutPage() {
           </StaggerContainer>
         </Container>
       </section>
-
-      {/* Journey Timeline */}
-      <section className="py-20 bg-gradient-to-b from-[#FAFDFA] to-[#F1F8F4]">
-        <Container size="normal">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge variant="green" className="mb-3">
-              The Journey
-            </Badge>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F241A]">
-              Coaching Milestones & Impact
-            </h2>
-          </div>
-
-          <div className="relative border-l-2 border-emerald-200 ml-4 md:ml-32 space-y-12 pl-6 md:pl-10">
-            {journey.map((step, idx) => (
-              <FadeUp key={idx} delay={idx * 0.1}>
-                <div className="relative group">
-                  <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-6 h-6 rounded-full bg-[#0F5132] border-4 border-white shadow-md group-hover:scale-125 transition-transform" />
-                  <span className="text-xs font-bold text-emerald-700 uppercase tracking-widest block mb-1">Step {step.step}</span>
-                  <h3 className="text-xl font-extrabold text-[#0F241A] mb-2">{step.title}</h3>
-                  <p className="text-base text-gray-600 max-w-xl leading-relaxed">{step.desc}</p>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <FinalCTA />
     </PageTransition>
   );
 }

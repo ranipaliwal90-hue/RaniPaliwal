@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import {
   Phone,
@@ -8,28 +7,36 @@ import {
   Heart,
 } from 'lucide-react';
 
-import { InstagramIcon, FacebookIcon } from '@/components/ui/SocialIcons';
+import {
+  InstagramIcon,
+  FacebookIcon,
+} from '@/components/ui/SocialIcons';
+
 import Container from '@/components/ui/Container';
 import { NAV_ITEMS, BRAND_INFO } from '@/data/navigation';
 import { PROGRAMS } from '@/data/programs';
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b from-[#F4FBF7] to-[#E9F5EE] border-t border-emerald-100/80 pt-16 pb-12 relative overflow-hidden">
+    <footer className="relative overflow-hidden border-t border-emerald-100/80 bg-gradient-to-b from-[#F4FBF7] to-[#E9F5EE] pb-12 pt-16">
 
       {/* Decorative ambient glow */}
 
-      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-200/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-emerald-200/20 blur-3xl" />
 
-      <Container size="large" className="relative z-10">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 mb-14">
+      <Container
+        size="large"
+        className="relative z-10"
+      >
+
+        <div className="mb-14 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-5 lg:gap-8">
 
           {/* =========================
               BRAND
           ========================== */}
 
-          <div className="lg:col-span-2 space-y-5">
+          <div className="space-y-5 lg:col-span-2">
 
             <div>
 
@@ -38,29 +45,45 @@ export default function Footer() {
                 className="inline-flex items-center gap-3"
               >
 
-                {/* RANI PALIWAL LOGO */}
+                {/* RP LOGO */}
 
-                <div className="relative w-12 h-12 shrink-0 rounded-full bg-white overflow-hidden shadow-md ring-1 ring-emerald-100">
-
-                  <Image
-                    src="/ranilogo.jpg"
-                    alt="Rani Paliwal - Being Fit"
-                    fill
-                    sizes="48px"
-                    className="object-cover"
-                  />
-
+                <div
+                  className="
+                    flex
+                    h-12
+                    w-12
+                    shrink-0
+                    items-center
+                    justify-center
+                    rounded-full
+                    bg-[#0F5132]
+                    shadow-md
+                    ring-1
+                    ring-emerald-100
+                  "
+                >
+                  <span
+                    className="
+                      text-[16px]
+                      font-black
+                      tracking-[-0.08em]
+                      text-white
+                    "
+                  >
+                    RP
+                  </span>
                 </div>
+
 
                 {/* BRAND TEXT */}
 
                 <div className="flex flex-col">
 
-                  <span className="font-extrabold text-2xl text-[#0F241A]">
+                  <span className="text-2xl font-extrabold text-[#0F241A]">
                     Rani Paliwal
                   </span>
 
-                  <span className="text-xs font-bold tracking-wider text-emerald-700 uppercase -mt-0.5">
+                  <span className="-mt-0.5 text-xs font-bold uppercase tracking-wider text-emerald-700">
                     ASN Certified Coach & Wellness Consultant
                   </span>
 
@@ -68,7 +91,8 @@ export default function Footer() {
 
               </Link>
 
-              <p className="text-sm text-gray-600 max-w-md leading-relaxed mt-3">
+
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-gray-600">
                 Empowering individuals through personalized nutrition,
                 fitness guidance, and sustainable lifestyle habits in
                 Udaipur, Rajasthan.
@@ -76,27 +100,27 @@ export default function Footer() {
 
             </div>
 
+
             {/* =========================
                 BEING FIT
             ========================== */}
 
-            <div className="p-3.5 rounded-2xl bg-white border border-emerald-100 shadow-xs max-w-md flex items-center gap-3.5">
+            <div className="flex max-w-md items-center gap-3.5 rounded-2xl border border-emerald-100 bg-white p-3.5 shadow-xs">
 
-              <div className="relative w-12 h-12 shrink-0 rounded-xl bg-[#F6FBF7] p-1 border border-emerald-100 overflow-hidden">
+              <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-emerald-100 bg-[#F6FBF7] p-1">
 
-                <Image
+                <img
                   src="/being.png"
                   alt="Being Fit Associated Club"
-                  width={48}
-                  height={48}
-                  className="w-full h-full object-contain"
+                  className="h-full w-full object-contain"
                 />
 
               </div>
 
+
               <div className="flex flex-col">
 
-                <span className="text-[11px] font-bold text-gray-500 uppercase tracking-wider">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-gray-500">
                   Associated Club
                 </span>
 
@@ -104,13 +128,14 @@ export default function Footer() {
                   Being Fit — Nutrition & Fitness Club
                 </span>
 
-                <span className="text-xs text-gray-600 font-medium">
+                <span className="text-xs font-medium text-gray-600">
                   Bhuwana, Udaipur
                 </span>
 
               </div>
 
             </div>
+
 
             {/* =========================
                 SOCIAL LINKS
@@ -125,10 +150,28 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Rani Paliwal Instagram"
-                className="w-10 h-10 rounded-full bg-white border border-emerald-200 flex items-center justify-center text-[#0F5132] hover:bg-[#0F5132] hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-xs"
+                className="
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-emerald-200
+                  bg-white
+                  text-[#0F5132]
+                  shadow-xs
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:bg-[#0F5132]
+                  hover:text-white
+                "
               >
-                <InstagramIcon className="w-5 h-5" />
+                <InstagramIcon className="h-5 w-5" />
               </a>
+
 
               {/* Facebook */}
 
@@ -137,10 +180,28 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Being Fit Facebook"
-                className="w-10 h-10 rounded-full bg-white border border-emerald-200 flex items-center justify-center text-[#0F5132] hover:bg-[#0F5132] hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-xs"
+                className="
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-emerald-200
+                  bg-white
+                  text-[#0F5132]
+                  shadow-xs
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:bg-[#0F5132]
+                  hover:text-white
+                "
               >
-                <FacebookIcon className="w-5 h-5" />
+                <FacebookIcon className="h-5 w-5" />
               </a>
+
 
               {/* LinkedIn */}
 
@@ -149,12 +210,30 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Rani Paliwal LinkedIn"
-                className="w-10 h-10 rounded-full bg-white border border-emerald-200 flex items-center justify-center text-[#0F5132] hover:bg-[#0F5132] hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-xs"
+                className="
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-emerald-200
+                  bg-white
+                  text-[#0F5132]
+                  shadow-xs
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:bg-[#0F5132]
+                  hover:text-white
+                "
               >
                 <span className="text-sm font-black">
                   in
                 </span>
               </a>
+
 
               {/* YouTube */}
 
@@ -163,12 +242,30 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Rani Paliwal YouTube"
-                className="w-10 h-10 rounded-full bg-white border border-emerald-200 flex items-center justify-center text-[#0F5132] hover:bg-[#0F5132] hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-xs"
+                className="
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-emerald-200
+                  bg-white
+                  text-[#0F5132]
+                  shadow-xs
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:bg-[#0F5132]
+                  hover:text-white
+                "
               >
                 <span className="text-sm font-black">
                   ▶
                 </span>
               </a>
+
 
               {/* WhatsApp */}
 
@@ -177,14 +274,32 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp Direct"
-                className="w-10 h-10 rounded-full bg-white border border-emerald-200 flex items-center justify-center text-emerald-600 hover:bg-emerald-600 hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-xs"
+                className="
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-full
+                  border
+                  border-emerald-200
+                  bg-white
+                  text-emerald-600
+                  shadow-xs
+                  transition-all
+                  duration-300
+                  hover:-translate-y-1
+                  hover:bg-emerald-600
+                  hover:text-white
+                "
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="h-5 w-5" />
               </a>
 
             </div>
 
           </div>
+
 
           {/* =========================
               QUICK LINKS
@@ -192,28 +307,39 @@ export default function Footer() {
 
           <div className="space-y-4">
 
-            <h4 className="text-xs font-bold text-[#0F5132] uppercase tracking-wider">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F5132]">
               Quick Links
             </h4>
 
             <ul className="space-y-2.5 text-sm">
 
               {NAV_ITEMS.map((item) => (
+
                 <li key={item.href}>
 
                   <Link
                     href={item.href}
-                    className="text-gray-600 hover:text-[#0F5132] hover:translate-x-1 inline-block transition-transform duration-200 font-semibold"
+                    className="
+                      inline-block
+                      font-semibold
+                      text-gray-600
+                      transition-transform
+                      duration-200
+                      hover:translate-x-1
+                      hover:text-[#0F5132]
+                    "
                   >
                     {item.label}
                   </Link>
 
                 </li>
+
               ))}
 
             </ul>
 
           </div>
+
 
           {/* =========================
               PROGRAMS
@@ -221,28 +347,39 @@ export default function Footer() {
 
           <div className="space-y-4">
 
-            <h4 className="text-xs font-bold text-[#0F5132] uppercase tracking-wider">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F5132]">
               Coaching Programs
             </h4>
 
             <ul className="space-y-2.5 text-sm">
 
               {PROGRAMS.map((prog) => (
+
                 <li key={prog.id}>
 
                   <Link
                     href={`/programs#${prog.id}`}
-                    className="text-gray-600 hover:text-[#0F5132] hover:translate-x-1 inline-block transition-transform duration-200 font-semibold"
+                    className="
+                      inline-block
+                      font-semibold
+                      text-gray-600
+                      transition-transform
+                      duration-200
+                      hover:translate-x-1
+                      hover:text-[#0F5132]
+                    "
                   >
                     {prog.title}
                   </Link>
 
                 </li>
+
               ))}
 
             </ul>
 
           </div>
+
 
           {/* =========================
               CONTACT
@@ -250,7 +387,7 @@ export default function Footer() {
 
           <div className="space-y-4">
 
-            <h4 className="text-xs font-bold text-[#0F5132] uppercase tracking-wider">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F5132]">
               Contact & Location
             </h4>
 
@@ -258,38 +395,27 @@ export default function Footer() {
 
               <div className="flex items-start gap-2.5">
 
-                <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-1" />
+                <MapPin className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />
 
                 <span>
                   Udaipur, Rajasthan
                   <br />
-                  (Being Fit Fitness 2.0, Bhuwana)
+                  (Being fit Nutrtion and Fitness Club)
                 </span>
 
               </div>
 
+
               <div className="flex items-center gap-2.5">
 
-                <Phone className="w-4 h-4 text-emerald-600 shrink-0" />
+                <Phone className="h-4 w-4 shrink-0 text-emerald-600" />
 
                 <a
                   href={`tel:${BRAND_INFO.phone}`}
-                  className="hover:text-[#0F5132] font-bold"
+                  className="font-bold hover:text-[#0F5132]"
                 >
                   {BRAND_INFO.displayPhone}
                 </a>
-
-              </div>
-
-              <div className="pt-2 text-xs font-semibold text-emerald-800 bg-emerald-100/60 p-3 rounded-xl border border-emerald-200/50">
-
-                <p>
-                  Personal Consultations:
-                </p>
-
-                <p>
-                  Mon - Sat: 5:30 AM – 10:30 PM
-                </p>
 
               </div>
 
@@ -299,37 +425,40 @@ export default function Footer() {
 
         </div>
 
+
         {/* =========================
             BOTTOM COPYRIGHT
         ========================== */}
 
-        <div className="pt-8 border-t border-emerald-200/60 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-emerald-200/60 pt-8 text-xs text-gray-500 md:flex-row">
 
           <p className="text-center md:text-left">
-            © 2026 Rani Paliwal. All rights reserved. Associated with Being Fit Club.
+            © 2026 Rani Paliwal. All rights reserved.
+            Associated with Being Fit Club.
           </p>
+
 
           <div className="flex flex-wrap items-center justify-center gap-6 font-medium">
 
             <Link
               href="/contact"
-              className="hover:text-[#0F5132] transition-colors"
+              className="transition-colors hover:text-[#0F5132]"
             >
               Privacy Policy
             </Link>
 
             <Link
               href="/contact"
-              className="hover:text-[#0F5132] transition-colors"
+              className="transition-colors hover:text-[#0F5132]"
             >
               Terms & Conditions
             </Link>
 
-            <span className="flex items-center gap-1 text-emerald-700 font-semibold">
+            <span className="flex items-center gap-1 font-semibold text-emerald-700">
 
               Made with
 
-              <Heart className="w-3.5 h-3.5 text-emerald-600 fill-emerald-600 inline" />
+              <Heart className="inline h-3.5 w-3.5 fill-emerald-600 text-emerald-600" />
 
               in Udaipur
 

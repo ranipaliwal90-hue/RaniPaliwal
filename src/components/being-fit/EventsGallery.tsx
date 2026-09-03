@@ -3,14 +3,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   Building2,
   CalendarDays,
-  Trophy,
   MonitorPlay,
   ArrowUpRight,
   X,
-  Clock3,
   Quote,
 } from 'lucide-react';
 
@@ -69,7 +68,7 @@ const IMAGE_CATEGORIES: GalleryCategory[] = [
       {
         id: 'event-1',
         title: 'Fitness Community Moments',
-        image: '/Events/event.jpg.jpg',
+        image: '/Events/beingfit1.jpg',
       },
       {
         id: 'event-2',
@@ -145,78 +144,6 @@ const IMAGE_CATEGORIES: GalleryCategory[] = [
   },
 
   {
-    id: 'results',
-    title: 'Fitness Results',
-    shortTitle: 'Results',
-    description:
-      'Real achievements, client milestones and success moments from the Being Fit community.',
-    icon: Trophy,
-
-    images: [
-      {
-        id: 'result-1',
-        title: 'Weight Loss Transformation',
-        image: '/result/result1.jpg',
-      },
-      {
-        id: 'result-2',
-        title: 'Before & After Progress',
-        image: '/result/result2.jpg',
-      },
-      {
-        id: 'result-3',
-        title: 'Remarkable Weight Loss Journey',
-        image: '/result/result3.jpg',
-      },
-      {
-        id: 'result-4',
-        title: 'Fitness Progress & Results',
-        image: '/result/result4.jpg',
-      },
-      {
-        id: 'result-5',
-        title: 'Successful Weight Management',
-        image: '/result/result5.jpg',
-      },
-      {
-        id: 'result-6',
-        title: 'Real Client Transformation',
-        image: '/result/result6.jpg',
-      },
-      {
-        id: 'result-7',
-        title: 'Consistency Brings Results',
-        image: '/result/result7.jpg',
-      },
-      {
-        id: 'result-8',
-        title: 'A Journey to Better Health',
-        image: '/result/result8.jpg',
-      },
-      {
-        id: 'result-9',
-        title: 'Progress Through Dedication',
-        image: '/result/result9.jpg',
-      },
-      {
-        id: 'result-10',
-        title: 'Stronger, Healthier, Better',
-        image: '/result/result10.jpg',
-      },
-      {
-        id: 'result-11',
-        title: 'Real Fitness Achievement',
-        image: '/result/result11.jpg',
-      },
-      {
-        id: 'result-12',
-        title: 'transformation Through Consistency',
-        image: '/result/result13.jpg',
-      },
-    ],
-  },
-
-  {
     id: 'virtual-coaching',
     title: 'Virtual Coaching',
     shortTitle: 'Virtual Coaching',
@@ -252,16 +179,11 @@ export default function EventsGallery() {
   const isVirtual =
     activeCategory === 'virtual-coaching';
 
-  const isEvents =
-    activeCategory === 'events';
-
-  const isResults =
-    activeCategory === 'results';
-
   return (
     <section className="relative overflow-hidden bg-[#F1F8F4] py-14 sm:py-18 lg:py-24">
 
       {/* Background Decorations */}
+
       <div className="pointer-events-none absolute -right-32 top-10 h-72 w-72 rounded-full bg-emerald-100/50 blur-3xl sm:h-80 sm:w-80" />
 
       <div className="pointer-events-none absolute -left-32 bottom-10 h-64 w-64 rounded-full bg-lime-100/30 blur-3xl sm:h-72 sm:w-72" />
@@ -291,12 +213,7 @@ export default function EventsGallery() {
           className="mx-auto mb-8 max-w-3xl px-1 text-center sm:mb-10"
         >
 
-          <Badge
-            variant="green"
-            icon={
-              <Trophy className="h-3.5 w-3.5" />
-            }
-          >
+          <Badge variant="green">
             Being Fit Gallery
           </Badge>
 
@@ -310,16 +227,19 @@ export default function EventsGallery() {
 
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-gray-600 sm:text-base lg:text-lg">
             Explore physical center transformations,
-            Being Fit events, fitness results and
-            virtual coaching moments.
+            Being Fit events and virtual coaching moments.
           </p>
 
         </motion.div>
 
+
         {/* ======================================================
             CATEGORY TABS
-            MOBILE = 2 x 2
-            DESKTOP = SINGLE ROW
+
+            ONLY:
+            1. Physical Center
+            2. Events
+            3. Virtual Coaching
         ====================================================== */}
 
         <div className="mb-9 w-full sm:mb-12">
@@ -327,10 +247,12 @@ export default function EventsGallery() {
           <div
             className="
               mx-auto
-              grid
+              flex
               w-full
               max-w-5xl
-              grid-cols-2
+              flex-wrap
+              items-center
+              justify-center
               gap-2
               rounded-2xl
               border
@@ -339,10 +261,6 @@ export default function EventsGallery() {
               p-2
               shadow-sm
 
-              sm:flex
-              sm:items-center
-              sm:justify-center
-              sm:gap-2
               sm:rounded-full
             "
           >
@@ -364,21 +282,20 @@ export default function EventsGallery() {
                   className={`
                     flex
                     min-h-[46px]
-                    w-full
+                    flex-1
                     items-center
                     justify-center
                     gap-1.5
                     rounded-xl
-                    px-2
+                    px-3
                     py-2.5
                     text-[11px]
                     font-bold
                     transition-all
                     duration-300
 
-                    sm:w-auto
                     sm:min-h-[44px]
-                    sm:shrink-0
+                    sm:flex-none
                     sm:rounded-full
                     sm:px-5
                     sm:text-sm
@@ -414,6 +331,7 @@ export default function EventsGallery() {
           </div>
 
         </div>
+
 
         {/* ======================================================
             CATEGORY INFORMATION
@@ -471,6 +389,7 @@ export default function EventsGallery() {
           </motion.div>
 
         </AnimatePresence>
+
 
         {/* ======================================================
             IMAGE GRID
@@ -625,32 +544,7 @@ export default function EventsGallery() {
                         `}
                       />
 
-                      {/* Category */}
 
-                      <div className="absolute left-3 top-3 sm:left-5 sm:top-5">
-
-                        <span className="inline-flex rounded-full border border-white/20 bg-black/40 px-3 py-1.5 text-[9px] font-extrabold uppercase tracking-wider text-white backdrop-blur-md sm:px-4 sm:py-2 sm:text-[10px]">
-                          {activeData.shortTitle}
-                        </span>
-
-                      </div>
-
-                      {/* Duration */}
-
-                      {isPhysicalCenter &&
-                        item.duration && (
-                          <div className="absolute right-3 top-3 sm:right-5 sm:top-5">
-
-                            <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-black/45 px-3 py-1.5 text-[9px] font-bold text-white backdrop-blur-md sm:px-4 sm:py-2 sm:text-[10px]">
-
-                              <Clock3 className="h-3 w-3" />
-
-                              {item.duration}
-
-                            </span>
-
-                          </div>
-                        )}
 
                       {/* Bottom Content */}
 
@@ -689,6 +583,7 @@ export default function EventsGallery() {
                               )}
 
                           </div>
+
 
                           {/* Open Image */}
 
@@ -734,9 +629,9 @@ export default function EventsGallery() {
 
                   </button>
 
+
                   {/* =================================================
                       PHYSICAL CENTER DETAILS
-                      NO TAGS / NO FOCUS AREAS
                   ================================================== */}
 
                   {isPhysicalCenter && (
@@ -758,6 +653,7 @@ export default function EventsGallery() {
                         </div>
                       )}
 
+
                       {/* Story */}
 
                       {item.story && (
@@ -769,6 +665,7 @@ export default function EventsGallery() {
 
                         </div>
                       )}
+
 
                       {/* Quote */}
 
@@ -788,7 +685,6 @@ export default function EventsGallery() {
                   )}
 
 
-            
                   {/* =================================================
                       VIRTUAL CONTENT
                   ================================================== */}
@@ -819,7 +715,7 @@ export default function EventsGallery() {
                       </div>
 
                       <p className="mt-4 text-sm leading-relaxed text-gray-600 sm:text-base">
-                       Live online nutrition sessions with Coach Rani Paliwal, bringing personalized guidance and a supportive wellness community together from anywhere.
+                        Live online nutrition sessions with Coach Rani Paliwal, bringing personalized guidance and a supportive wellness community together from anywhere.
                       </p>
 
                     </div>
@@ -833,6 +729,7 @@ export default function EventsGallery() {
           </motion.div>
 
         </AnimatePresence>
+
 
         {/* ======================================================
             VIRTUAL COACHING INFO
@@ -889,6 +786,7 @@ export default function EventsGallery() {
           </motion.div>
 
         )}
+
 
         {/* ======================================================
             LIGHTBOX
@@ -964,6 +862,7 @@ export default function EventsGallery() {
 
               </button>
 
+
               {/* Lightbox */}
 
               <motion.div
@@ -1029,9 +928,9 @@ export default function EventsGallery() {
 
                 </div>
 
+
                 {/* ==================================================
                     LIGHTBOX DETAILS
-                    NO TAGS
                 =================================================== */}
 
                 <div className="max-h-[30vh] overflow-y-auto bg-white px-4 py-4 sm:px-7 sm:py-5">
@@ -1059,8 +958,9 @@ export default function EventsGallery() {
 
                           {selectedImage.duration && (
                             <div className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-[10px] font-bold text-emerald-800">
-                              <Clock3 className="h-3 w-3" />
+
                               {selectedImage.duration}
+
                             </div>
                           )}
 
@@ -1090,6 +990,7 @@ export default function EventsGallery() {
                       )}
 
                     </div>
+
 
                     {/* Close */}
 

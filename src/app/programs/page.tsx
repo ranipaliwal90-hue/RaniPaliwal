@@ -17,7 +17,6 @@ import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
 import LeafDecoration from '@/components/ui/LeafDecoration';
 import FadeUp from '@/components/animations/FadeUp';
-import FinalCTA from '@/components/home/FinalCTA';
 import { PROGRAMS, Program } from '@/data/programs';
 
 export const metadata: Metadata = {
@@ -255,11 +254,6 @@ export default function ProgramsPage() {
           })}
         </Container>
       </section>
-
-      {/* =========================
-          FINAL CTA
-      ========================== */}
-      <FinalCTA />
     </PageTransition>
   );
 }
