@@ -24,7 +24,7 @@ const PHILOSOPHY_CARDS = [
       'A balanced nutrition and strength-focused approach designed to support healthy weight gain, better energy, and improved overall fitness.',
   },
   {
-    image: '/nutrition.jpg',
+    image: '/nutrition1.jpg',
     title: 'Nutrition Coaching',
     subtitle: 'Personalized Nutrition',
     description:

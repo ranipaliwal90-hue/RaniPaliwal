@@ -57,7 +57,7 @@ export const PROGRAMS: Program[] = [
       'Anyone who wants to develop healthier eating habits and a more balanced approach to everyday nutrition.',
     pricingText: 'Contact for pricing',
     image:
-      '/nutrition.jpg',
+      '/nutrition1.jpg',
   },
 
   {
