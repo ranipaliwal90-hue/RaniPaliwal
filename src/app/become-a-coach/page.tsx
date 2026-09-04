@@ -200,32 +200,6 @@ export default function BecomeACoachPage() {
                           "
                         />
 
-                        {/* BADGE */}
-                        <span
-                          className="
-                            absolute
-                            top-4
-                            left-4
-                            text-[10px]
-                            sm:text-xs
-                            font-extrabold
-                            uppercase
-                            tracking-wider
-                            text-white
-                            bg-[#0F5132]/90
-                            backdrop-blur-md
-                            px-3
-                            sm:px-3.5
-                            py-1.5
-                            rounded-full
-                            border
-                            border-emerald-400/30
-                          "
-                        >
-                          {item.badge}
-                        </span>
-
-
                         {/* IMAGE CONTENT */}
                         <div className="absolute bottom-4 left-4 right-4 text-white">
 
