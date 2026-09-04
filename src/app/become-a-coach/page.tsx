@@ -70,7 +70,7 @@ export default function BecomeACoachPage() {
               </div>
 
               <Button
-                href="#apply-form"
+                href="/contact"
                 variant="primary"
                 size="lg"
                 showArrow
@@ -230,11 +230,6 @@ export default function BecomeACoachPage() {
 
                       {/* DARK GRADIENT */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-
-                      {/* BADGE */}
-                      <span className="absolute left-4 top-4 rounded-full border border-emerald-400/30 bg-[#0F5132]/90 px-3 py-1.5 text-[10px] font-extrabold uppercase tracking-wider text-white backdrop-blur-md">
-                        {item.badge}
-                      </span>
 
                       {/* IMAGE CONTENT */}
                       <div className="absolute bottom-4 left-4 right-4 text-white">
