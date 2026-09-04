@@ -433,7 +433,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-4 border-t border-emerald-200/60 pt-8 text-xs text-gray-500 md:flex-row">
 
           <p className="text-center md:text-left">
-            © 2026 Rani Paliwal. All rights reserved.
+            © 2026 Rani Paliwal. All rights reserved
             Associated with Being Fit Club.
           </p>
 
@@ -454,7 +454,7 @@ export default function Footer() {
               Terms & Conditions
             </Link>
 
-            <span className="flex items-center gap-1 font-semibold text-emerald-700">
+            {/* <span className="flex items-center gap-1 font-semibold text-emerald-700">
 
               Made with
 
@@ -462,7 +462,7 @@ export default function Footer() {
 
               in Udaipur
 
-            </span>
+            </span> */}
 
           </div>
 

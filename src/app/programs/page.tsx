@@ -51,6 +51,14 @@ export default function ProgramsPage() {
     }
   };
 
+  const getButtonText = (title: string) => {
+    if (title.toLowerCase() === 'nutrition coaching') {
+      return 'Book Now';
+    }
+
+    return 'Book Now';
+  };
+
   return (
     <PageTransition>
       {/* =========================
@@ -83,6 +91,7 @@ export default function ProgramsPage() {
         <Container size="large" className="space-y-20">
           {PROGRAMS.map((program: Program, index: number) => {
             const isEven = index % 2 === 0;
+            const buttonText = getButtonText(program.title);
 
             return (
               <div
@@ -96,7 +105,7 @@ export default function ProgramsPage() {
                       grid
                       grid-cols-1
                       lg:grid-cols-12
-                      gap-10
+                      gap-6
                       lg:gap-12
                       items-center
                       p-6
@@ -112,6 +121,7 @@ export default function ProgramsPage() {
                       duration-300
                     `}
                   >
+
                     {/* =========================
                         CONTENT COLUMN
                     ========================== */}
@@ -121,6 +131,7 @@ export default function ProgramsPage() {
                         ${!isEven ? 'lg:order-2' : 'lg:order-1'}
                       `}
                     >
+
                       {/* Icon + Title */}
                       <div className="flex items-start gap-3 mb-5">
                         <div className="w-14 h-14 shrink-0 rounded-2xl bg-[#0F5132] text-lime-400 flex items-center justify-center shadow-md">
@@ -169,7 +180,7 @@ export default function ProgramsPage() {
                       </div>
 
                       {/* Ideal For */}
-                      <div className="p-4 sm:p-5 rounded-2xl bg-white border border-emerald-100 mb-8">
+                      <div className="p-4 sm:p-5 rounded-2xl bg-white border border-emerald-100 mb-6 lg:mb-8">
                         <p className="text-xs font-bold text-gray-500 uppercase tracking-wide">
                           Ideal For:
                         </p>
@@ -179,15 +190,58 @@ export default function ProgramsPage() {
                         </p>
                       </div>
 
-                      {/* Bottom CTA */}
-                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-5 border-t border-emerald-200/60">
-                        <div className="text-sm font-bold text-emerald-900">
-                          <span>Investment: </span>
+                      {/* ==================================================
+                          MOBILE IMAGE + BUTTON
+                      ================================================== */}
+                      <div className="lg:hidden w-full">
 
-                          <span className="inline-block mt-1 sm:mt-0 text-emerald-700 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-200/60">
-                            {program.pricingText}
-                          </span>
+                        {/* Mobile Image */}
+                        <div
+                          className="
+                            relative
+                            w-full
+                            h-[280px]
+                            sm:h-[360px]
+                            rounded-[24px]
+                            overflow-hidden
+                            border-2
+                            border-white
+                            shadow-xl
+                            bg-white
+                            flex
+                            items-center
+                            justify-center
+                          "
+                        >
+                          <Image
+                            src={program.image}
+                            alt={program.title}
+                            fill
+                            sizes="100vw"
+                            className="object-contain p-2 sm:p-3"
+                          />
                         </div>
+
+                        {/* Mobile CTA */}
+                        <div className="mt-3 w-full">
+                          <Button
+                            href="/contact"
+                            variant="primary"
+                            size="md"
+                            showArrow
+                          >
+                            <span className="whitespace-nowrap text-[11px] sm:text-sm">
+                              {buttonText}
+                            </span>
+                          </Button>
+                        </div>
+
+                      </div>
+
+                      {/* ==================================================
+                          DESKTOP CTA
+                      ================================================== */}
+                      <div className="hidden lg:flex items-center justify-end pt-5 border-t border-emerald-200/60">
 
                         <Button
                           href="/contact"
@@ -195,20 +249,25 @@ export default function ProgramsPage() {
                           size="md"
                           showArrow
                         >
-                          Inquire for {program.title}
+                          {buttonText}
                         </Button>
+
                       </div>
+
                     </div>
 
                     {/* =========================
-                        IMAGE COLUMN
+                        DESKTOP IMAGE COLUMN
                     ========================== */}
                     <div
                       className={`
+                        hidden
+                        lg:block
                         lg:col-span-5
                         ${!isEven ? 'lg:order-1' : 'lg:order-2'}
                       `}
                     >
+
                       <div
                         className="
                           relative
@@ -246,7 +305,9 @@ export default function ProgramsPage() {
                           "
                         />
                       </div>
+
                     </div>
+
                   </div>
                 </FadeUp>
               </div>

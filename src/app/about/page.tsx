@@ -84,7 +84,7 @@ export default function AboutPage() {
                 Health & Wellness Consultant • 12+ Years Experience
               </p>
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8">
-                Welcome! I am Rani Paliwal, an ASN Certified Coach based in Udaipur, Rajasthan. Over the past 12+ years, I have empowered more than 10,000 individuals to build a healthier, stronger, and more confident lifestyle through custom nutrition and functional fitness.
+               Welcome! I am Rani Paliwal, based in Udaipur, Rajasthan. Over the past 12+ years, I have empowered more than 10,000 individuals to build a healthier, stronger, and more confident lifestyle through custom nutrition and functional fitness.
               </p>
 
               <div className="flex flex-wrap gap-4 mb-8">

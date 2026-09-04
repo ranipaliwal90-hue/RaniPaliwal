@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import {
   Phone,
-  MessageCircle,
   Navigation,
 } from 'lucide-react';
 
@@ -69,39 +68,46 @@ export default function BeingFitPage() {
                 <p className="mb-8 text-base leading-relaxed text-gray-600 sm:text-lg">
                   Being Fit is the physical fitness & nutrition club
                   associated with <strong>Coach Rani Paliwal</strong>.
-                  Located in Navratna Complex, Pulla Bhuwana,, Udaipur, our club provides fitness,
-                  nutrition and group workout experiences.
+                  Located in Navratna Complex, Pulla Bhuwana, Udaipur,
+                  our club provides fitness, nutrition and group workout
+                  experiences.
                 </p>
 
                 {/* ==================================================
-                    BUTTONS
+                    MOBILE IMAGE
+                    Only visible on mobile
                 ================================================== */}
 
-                <div className="flex w-full flex-wrap items-center gap-3 sm:w-auto">
+                <div className="mb-5 w-full lg:hidden">
+                  <div className="relative w-full overflow-hidden rounded-[28px] border-4 border-white bg-white shadow-2xl">
+                    <div className="relative flex w-full items-center justify-center bg-white">
+                      <Image
+                        src="/being.png"
+                        alt="Being Fit Associated Club Facility"
+                        width={1200}
+                        height={800}
+                        className="h-auto max-h-[420px] w-full object-contain object-center"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* ==================================================
+                    BUTTONS
+                    Mobile + Desktop
+                ================================================== */}
+
+                <div className="flex w-full items-center gap-2 sm:w-auto sm:gap-3">
 
                   {/* CALL NOW */}
                   <a
                     href={`tel:${CLUB_INFO.phone}`}
-                    className="inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-[#0F5132] px-7 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B4329] hover:shadow-lg"
+                    className="inline-flex h-[48px] min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full bg-[#0F5132] px-2 text-[11px] font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B4329] hover:shadow-lg sm:h-[52px] sm:flex-none sm:gap-2 sm:px-7 sm:text-sm"
                   >
-                    <Phone className="h-5 w-5 shrink-0" />
+                    <Phone className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
 
                     <span className="whitespace-nowrap">
                       Call Now
-                    </span>
-                  </a>
-
-                  {/* WHATSAPP */}
-                  <a
-                    href={CLUB_INFO.whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex h-[52px] items-center justify-center gap-2 rounded-full bg-emerald-600 px-7 text-sm font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-700 hover:shadow-lg"
-                  >
-                    <MessageCircle className="h-5 w-5 shrink-0" />
-
-                    <span className="whitespace-nowrap">
-                      WhatsApp Us
                     </span>
                   </a>
 
@@ -110,9 +116,9 @@ export default function BeingFitPage() {
                     href={CLUB_INFO.mapDirectionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-[52px] items-center justify-center gap-2 rounded-full border border-emerald-200 bg-white px-7 text-sm font-bold text-[#0F5132] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-50 hover:shadow-md"
+                    className="inline-flex h-[48px] min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border border-emerald-200 bg-white px-2 text-[11px] font-bold text-[#0F5132] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-50 hover:shadow-md sm:h-[52px] sm:flex-none sm:gap-2 sm:px-7 sm:text-sm"
                   >
-                    <Navigation className="h-5 w-5 shrink-0 text-emerald-600" />
+                    <Navigation className="h-4 w-4 shrink-0 text-emerald-600 sm:h-5 sm:w-5" />
 
                     <span className="whitespace-nowrap">
                       Get Directions
@@ -124,10 +130,11 @@ export default function BeingFitPage() {
               </div>
 
               {/* ==================================================
-                  HERO IMAGE
+                  DESKTOP HERO IMAGE
+                  Hidden on mobile
               ================================================== */}
 
-              <div className="relative flex w-full items-center justify-center lg:col-span-5">
+              <div className="relative hidden w-full items-center justify-center lg:col-span-5 lg:flex">
 
                 <div className="relative w-full overflow-hidden rounded-[32px] border-4 border-white bg-white shadow-2xl">
 
@@ -213,6 +220,7 @@ export default function BeingFitPage() {
           </Container>
 
         </section>
+
       </main>
     </PageTransition>
   );

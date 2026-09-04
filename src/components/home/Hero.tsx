@@ -55,10 +55,12 @@ export default function Hero() {
 
       <Container size="large">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
           {/* =====================================================
               LEFT COLUMN: RANI PALIWAL PRIMARY HERO CONTENT
           ===================================================== */}
           <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
+
             {/* 1. Badge */}
             <motion.div
               {...getMotionProps(0.1, -12)}
@@ -89,6 +91,7 @@ export default function Hero() {
             >
               <span className="relative inline-block text-gradient-brand">
                 Transform
+
                 <svg
                   className="
                     absolute
@@ -122,6 +125,7 @@ export default function Hero() {
               <h2 className="text-xl sm:text-2xl font-extrabold text-[#0F5132] tracking-tight">
                 Rani Paliwal
               </h2>
+
               <p className="text-xs sm:text-sm font-bold text-emerald-700 uppercase tracking-wide mt-0.5">
                 ASN Certified Coach & Health and Wellness Consultant
               </p>
@@ -193,6 +197,7 @@ export default function Hero() {
               "
             >
               <div className="flex -space-x-3 overflow-hidden">
+
                 <div
                   className="
                     w-10
@@ -249,6 +254,7 @@ export default function Hero() {
                 >
                   <Star className="w-3.5 h-3.5 fill-lime-400" />
                 </div>
+
               </div>
 
               <div className="flex flex-col">
@@ -271,12 +277,14 @@ export default function Hero() {
                 </span>
               </div>
             </motion.div>
+
           </div>
 
           {/* =====================================================
               RIGHT COLUMN: RANI PALIWAL PORTRAIT VISUAL
           ===================================================== */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative lg:-translate-y-17">
+
             <motion.div
               initial={
                 shouldReduceMotion
@@ -302,6 +310,7 @@ export default function Hero() {
                 lg:max-w-none
               "
             >
+
               {/* Subtle Green Glow */}
               <div
                 className="
@@ -326,11 +335,11 @@ export default function Hero() {
                   border-white
                   shadow-2xl
                   bg-white
-                  group
                 "
               >
+
                 <Image
-                  src="/ranii.jpg"
+                  src="/rani22.jpg"
                   alt="Coach Rani Paliwal Health & Wellness Consultant"
                   width={600}
                   height={750}
@@ -339,12 +348,8 @@ export default function Hero() {
                     h-[460px]
                     sm:h-[540px]
                     object-cover
-                    object-top
+                    object-[center_2%]
                     rounded-[28px]
-                    group-hover:scale-[1.03]
-                    transition-transform
-                    duration-700
-                    ease-out
                   "
                   priority
                 />
@@ -363,77 +368,12 @@ export default function Hero() {
                   "
                 />
 
-          
-
-                {/* Transformations Floating Card */}
-                <motion.div
-                  animate={
-                    shouldReduceMotion
-                      ? {}
-                      : {
-                          y: [0, -8, 0],
-                        }
-                  }
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                  className="
-                    absolute
-                    bottom-5
-                    left-4
-                    sm:bottom-6
-                    sm:left-6
-                    glass-card
-                    px-4
-                    py-3
-                    sm:px-5
-                    sm:py-3.5
-                    rounded-2xl
-                    flex
-                    items-center
-                    gap-3
-                    sm:gap-3.5
-                    shadow-xl
-                    border
-                    border-white/90
-                    z-20
-                  "
-                >
-                  <div
-                    className="
-                      w-10
-                      h-10
-                      sm:w-11
-                      sm:h-11
-                      rounded-full
-                      bg-[#0F5132]
-                      text-lime-400
-                      flex
-                      items-center
-                      justify-center
-                      font-black
-                      text-xs
-                      sm:text-sm
-                      shrink-0
-                    "
-                  >
-                    10k+
-                  </div>
-
-                  <div>
-                    <p className="text-sm sm:text-base font-black text-gray-900 leading-tight">
-                      10,000+
-                    </p>
-                    <p className="text-[10px] sm:text-xs text-emerald-800 font-bold">
-                      Transformations
-                    </p>
-                  </div>
-                </motion.div>
               </div>
+
             </motion.div>
+
           </div>
+
         </div>
 
         {/* Scroll Indicator */}
@@ -467,6 +407,7 @@ export default function Hero() {
           "
         >
           <span>Scroll to explore</span>
+
           <motion.div
             animate={
               shouldReduceMotion
@@ -484,6 +425,7 @@ export default function Hero() {
             <ChevronDown className="w-4 h-4 text-emerald-600 mt-1" />
           </motion.div>
         </motion.div>
+
       </Container>
     </section>
   );

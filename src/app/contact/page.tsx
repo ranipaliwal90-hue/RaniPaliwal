@@ -66,73 +66,78 @@ export default function ContactPage() {
                 with Coach Rani Paliwal.
               </p>
 
-              {/* =================================================
-                  SOCIAL LINKS — TOP
-              ================================================== */}
-              <div className="mt-8 flex flex-col items-center">
-                <p className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.16em] text-emerald-700">
-                  Follow Rani&apos;s Journey
-                </p>
+             {/* =================================================
+    SOCIAL LINKS — TOP
+================================================== */}
+<div className="mt-8 flex flex-col items-center">
+  <p className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.16em] text-emerald-700">
+    Follow Rani&apos;s Journey
+  </p>
 
-                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5">
-                  <a
-                    href="https://instagram.com/rani_paliwal?r=nametag"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Rani Paliwal Instagram"
-                    title="Instagram"
-                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
-                  >
-                    <InstagramIcon className="h-7 w-7 sm:h-8 sm:w-8" />
-                  </a>
+  <div className="flex w-full flex-nowrap items-center justify-center gap-2 sm:gap-5">
 
-                  <a
-                    href="https://www.facebook.com/beingfit.asia"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Being Fit Facebook"
-                    title="Facebook"
-                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
-                  >
-                    <FacebookIcon className="h-7 w-7 sm:h-8 sm:w-8" />
-                  </a>
+    {/* Instagram */}
+    <a
+      href="https://instagram.com/rani_paliwal?r=nametag"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Rani Paliwal Instagram"
+      title="Instagram"
+      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+    >
+      <InstagramIcon className="h-6 w-6 sm:h-8 sm:w-8" />
+    </a>
 
-                  <a
-                    href="https://www.linkedin.com/in/rani-paliwal-4164b670/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Rani Paliwal LinkedIn"
-                    title="LinkedIn"
-                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
-                  >
-                    <span className="text-lg font-black sm:text-xl">in</span>
-                  </a>
+    {/* Facebook */}
+    <a
+      href="https://www.facebook.com/beingfit.asia"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Being Fit Facebook"
+      title="Facebook"
+      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+    >
+      <FacebookIcon className="h-6 w-6 sm:h-8 sm:w-8" />
+    </a>
 
-                  <a
-                    href="https://www.youtube.com/@ranipaliwal3200"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Rani Paliwal YouTube"
-                    title="YouTube"
-                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
-                  >
-                    <RiYoutubeFill className="h-8 w-8 sm:h-9 sm:w-9" />
-                  </a>
+    {/* LinkedIn */}
+    <a
+      href="https://www.linkedin.com/in/rani-paliwal-4164b670/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Rani Paliwal LinkedIn"
+      title="LinkedIn"
+      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+    >
+      <span className="text-base font-black sm:text-xl">in</span>
+    </a>
 
-                  {/* WhatsApp */}
-                  <a
-                    href={BRAND_INFO.whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Chat with Rani Paliwal on WhatsApp"
-                    title="WhatsApp"
-                    className="flex h-14 w-14 items-center justify-center rounded-full border border-emerald-100 bg-white text-emerald-600 shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-600 hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
-                  >
-                    <RiWhatsappLine className="h-8 w-8 sm:h-9 sm:w-9" />
-                  </a>
-                </div>
-              </div>
+    {/* YouTube */}
+    <a
+      href="https://www.youtube.com/@ranipaliwal3200"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Rani Paliwal YouTube"
+      title="YouTube"
+      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-emerald-100 bg-white text-[#0F5132] shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0F5132] hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+    >
+      <RiYoutubeFill className="h-7 w-7 sm:h-9 sm:w-9" />
+    </a>
 
+    {/* WhatsApp */}
+    <a
+      href={BRAND_INFO.whatsappUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with Rani Paliwal on WhatsApp"
+      title="WhatsApp"
+      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-emerald-100 bg-white text-emerald-600 shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-600 hover:text-white hover:shadow-lg sm:h-16 sm:w-16"
+    >
+      <RiWhatsappLine className="h-7 w-7 sm:h-9 sm:w-9" />
+    </a>
+
+  </div>
+</div>
             </div>
 
           </Container>

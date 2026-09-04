@@ -180,12 +180,12 @@ export const RESULTS = [
     result: '26Kg',
     image: '/result/Screenshot 2026-09-02 094749.png',
   },
-    {
-    name: 'Rakesh And Sweety Jain',
-    title: 'Weight Loss',
-    result: '22 And 21Kg',
-    image: '/result/Screenshot 2026-09-02 095501.png',
-  },
+  //   {
+  //   name: 'Rakesh And Sweety Jain',
+  //   title: 'Weight Loss',
+  //   result: '22 And 21Kg',
+  //   image: '/result/Screenshot 2026-09-02 095501.png',
+  // },
 
    {
     name: 'Girish Sharma',

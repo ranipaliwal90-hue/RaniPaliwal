@@ -127,7 +127,7 @@ export default function BeingFitPreview() {
                     </div>
                     <div>
                       <p className="text-sm font-extrabold text-gray-900">Associated Club with Rani Paliwal</p>
-                      <p className="text-xs text-emerald-700 font-medium">Bhuwana, Udaipur • Mon-Sat 5:30 AM - 10:30 PM</p>
+                      <p className="text-xs text-emerald-700 font-medium">Being Fit, Near Shrinath Hospital, Navratna Complex, Pulla Bhuwana, Mahaveer Colony Park, Udaipur, Rajasthan</p>
                     </div>
                   </div>
                 </motion.div>

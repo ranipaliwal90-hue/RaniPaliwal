@@ -54,10 +54,6 @@ export const metadata: Metadata = {
       'Personalized fitness, nutrition and wellness coaching by Rani Paliwal in Udaipur, Rajasthan.',
     images: ['/being.png'],
   },
-  icons: {
-    icon: '/being.png',
-    apple: '/being.png',
-  },
 };
 
 export default function RootLayout({

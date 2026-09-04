@@ -15,6 +15,7 @@ import {
   Mail,
   ListChecks,
   Trophy,
+  Dumbbell,
 } from 'lucide-react';
 
 import { NAV_ITEMS } from '@/data/navigation';
@@ -63,20 +64,26 @@ export default function Navbar() {
       href: '/about',
       icon: UserRound,
     },
-    {
+  
+     {
+      label: 'Results',
+      href: '/results',
+      icon: Trophy,
+    },
+     {
       label: 'Services',
       href: '/programs',
       icon: ListChecks,
-    },
-     {
-      label: 'Transformations',
-      href: '/results',
-      icon: Trophy,
     },
     {
       label: 'Coach',
       href: '/become-a-coach',
       icon: GraduationCap,
+    },
+    {
+      label: 'Being Fit',
+      href: '/being-fit',
+      icon: Dumbbell,
     },
     {
       label: 'Contact',
@@ -584,7 +591,7 @@ export default function Navbar() {
         aria-label="Mobile navigation"
       >
 
-        <div className="grid grid-cols-6 items-center">
+        <div className="grid grid-cols-7 items-center">
 
           {mobileBottomNav.map((item) => {
 
