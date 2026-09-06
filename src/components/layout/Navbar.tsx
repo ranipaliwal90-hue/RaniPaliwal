@@ -157,13 +157,15 @@ export default function Navbar() {
               {/* Brand Text */}
 
               <div className="flex min-w-0 flex-col">
-
+             <p className="mb-1 text-[9px] font-medium text-emerald-800 sm:text-[10px]">
+  Local & Remote Worldwide • Since 2012
+</p>
                 <span className="whitespace-nowrap text-[20px] font-extrabold leading-none tracking-[-0.03em] text-[#0F241A] transition-colors duration-200 group-hover:text-[#0F5132]">
                   Rani Paliwal
                 </span>
 
                 <span className="mt-1 whitespace-nowrap text-[8px] font-bold uppercase tracking-[0.09em] text-emerald-700">
-                  ASN Certified Coach & Wellness Consultant
+                   ASN Certified Coach & Wellness Consultant
                 </span>
 
               </div>

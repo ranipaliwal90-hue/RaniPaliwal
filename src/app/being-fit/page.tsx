@@ -62,16 +62,70 @@ export default function BeingFitPage() {
                 </h1>
 
                 <p className="mb-4 text-lg font-extrabold text-emerald-800 sm:text-xl">
-                 Shree Krishna, 1st floor , Near Shrinath Hospital , Navratna Complex Udaipur 
+                  Shree Krishna, 1st Floor, Near Shrinath Hospital,
+                  Navratna Complex, Udaipur
                 </p>
 
-                <p className="mb-8 text-base leading-relaxed text-gray-600 sm:text-lg">
-                  Being Fit is the physical fitness & nutrition club
-                  associated with <strong>Coach Rani Paliwal</strong>.
-                  Located in   Shree Krishna, 1st floor , Near Shrinath Hospital , Navratna Complex Udaipur,
-                  our club provides fitness, nutrition and group workout
-                  experiences.
-                </p>
+                {/* ==================================================
+                    FREE CHECKUP + FREE TRIAL
+                ================================================== */}
+
+                <div className="mb-8 w-full">
+
+                  {/* CHECKUP HIGHLIGHT CARD */}
+
+                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-5 shadow-sm sm:p-6">
+
+                    <h3 className="mb-2 text-lg font-extrabold text-[#0F5132] sm:text-xl">
+                      Get Your Body Fat Checkup Done
+                    </h3>
+
+                    <p className="mb-4 text-sm leading-relaxed text-gray-700 sm:text-base">
+                      Book your{' '}
+                      <strong className="text-[#0F5132]">
+                        Free Experience Trial
+                      </strong>{' '}
+                      with us today. During your visit, we will check
+                      your body composition and provide a{' '}
+                      <strong className="text-[#0F5132]">
+                        free one-on-one consultation
+                      </strong>.
+                    </p>
+
+                    {/* CHECKUP DETAILS */}
+
+                    <div className="mb-4">
+
+                      <p className="mb-2 text-sm font-extrabold text-[#0F5132]">
+                        Check-up Details:
+                      </p>
+
+                      <div className="flex flex-wrap gap-2">
+
+                        {[
+                          'Weight',
+                          'Body Fat',
+                          'Visceral Fat',
+                          'Muscle',
+                          'BMI',
+                          'BMR',
+                          'Biological Age',
+                          'And More',
+                        ].map((item) => (
+                          <span
+                            key={item}
+                            className="rounded-full border border-emerald-200 bg-white px-3 py-1.5 text-xs font-semibold text-[#0F5132] shadow-sm sm:text-sm"
+                          >
+                            {item}
+                          </span>
+                        ))}
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
 
                 {/* ==================================================
                     MOBILE IMAGE
@@ -79,8 +133,11 @@ export default function BeingFitPage() {
                 ================================================== */}
 
                 <div className="mb-5 w-full lg:hidden">
+
                   <div className="relative w-full overflow-hidden rounded-[28px] border-4 border-white bg-white shadow-2xl">
+
                     <div className="relative flex w-full items-center justify-center bg-white">
+
                       <Image
                         src="/being.png"
                         alt="Being Fit Associated Club Facility"
@@ -88,8 +145,11 @@ export default function BeingFitPage() {
                         height={800}
                         className="h-auto max-h-[420px] w-full object-contain object-center"
                       />
+
                     </div>
+
                   </div>
+
                 </div>
 
                 {/* ==================================================
@@ -100,29 +160,35 @@ export default function BeingFitPage() {
                 <div className="flex w-full items-center gap-2 sm:w-auto sm:gap-3">
 
                   {/* CALL NOW */}
+
                   <a
                     href={`tel:${CLUB_INFO.phone}`}
                     className="inline-flex h-[48px] min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full bg-[#0F5132] px-2 text-[11px] font-bold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B4329] hover:shadow-lg sm:h-[52px] sm:flex-none sm:gap-2 sm:px-7 sm:text-sm"
                   >
+
                     <Phone className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" />
 
                     <span className="whitespace-nowrap">
                       Call Now
                     </span>
+
                   </a>
 
                   {/* GET DIRECTIONS */}
+
                   <a
                     href={CLUB_INFO.mapDirectionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex h-[48px] min-w-0 flex-1 items-center justify-center gap-1.5 rounded-full border border-emerald-200 bg-white px-2 text-[11px] font-bold text-[#0F5132] shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-50 hover:shadow-md sm:h-[52px] sm:flex-none sm:gap-2 sm:px-7 sm:text-sm"
                   >
+
                     <Navigation className="h-4 w-4 shrink-0 text-emerald-600 sm:h-5 sm:w-5" />
 
                     <span className="whitespace-nowrap">
                       Get Directions
                     </span>
+
                   </a>
 
                 </div>
@@ -161,13 +227,11 @@ export default function BeingFitPage() {
 
         </section>
 
-
         {/* =========================================================
             EVENTS / RESULTS / VIRTUAL COACHING GALLERY
         ========================================================== */}
 
         <EventsGallery />
-
 
         {/* =========================================================
             FACILITIES
@@ -191,7 +255,6 @@ export default function BeingFitPage() {
               </h2>
 
             </div>
-
 
             <StaggerContainer className="grid grid-cols-1 gap-6 md:grid-cols-3">
 
