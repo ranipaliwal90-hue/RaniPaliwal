@@ -42,7 +42,7 @@ export default function BeingFitPreview() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F241A] tracking-tight mb-2">
-              Being Fit
+             Being fit Nutriton And Fitness Club
             </h2>
 
             <p className="text-lg font-bold text-emerald-700 mb-4">

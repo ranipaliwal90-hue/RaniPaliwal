@@ -75,7 +75,7 @@ export default function RootLayout({
     },
     memberOf: {
       '@type': 'SportsActivityLocation',
-      name: 'Being Fit Fitness 2.0',
+      name: 'Being Fit',
       address: 'Bhuwana, Udaipur, Rajasthan',
     },
     sameAs: [

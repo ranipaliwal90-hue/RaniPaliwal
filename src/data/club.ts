@@ -14,7 +14,7 @@ export const CLUB_INFO = {
   subtitle: 'Nutrition & Fitness Center',
   tagline: 'An environment designed by Rani Paliwal to help you train, stay consistent, and build a healthier lifestyle.',
   locationName: 'Being Fit Fitness 2.0 / Nutrition Center',
-  address: 'Navratna Complex, near Shrinath Hospital, Bhuwana, Udaipur, Rajasthan 313001',
+  address: 'Shree Krishna, 1st floor , Near Shrinath Hospital , Navratna Complex,Udaipur ',
   phone: '+91 9982011555',
   whatsappUrl: 'https://wa.me/919982011555?text=Hello%20Being%20Fit%20Center,%20I%20want%20to%20inquire%20about%20fitness%20challenges%20and%20memberships.',
   mapDirectionsUrl: 'https://maps.google.com/?q=Being+Fit+Nutrition+Center+Navratna+Complex+Udaipur',

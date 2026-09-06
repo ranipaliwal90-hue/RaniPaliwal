@@ -62,13 +62,13 @@ export default function BeingFitPage() {
                 </h1>
 
                 <p className="mb-4 text-lg font-extrabold text-emerald-800 sm:text-xl">
-                  Bhuwana, Udaipur, Rajasthan
+                 Shree Krishna, 1st floor , Near Shrinath Hospital , Navratna Complex Udaipur 
                 </p>
 
                 <p className="mb-8 text-base leading-relaxed text-gray-600 sm:text-lg">
                   Being Fit is the physical fitness & nutrition club
                   associated with <strong>Coach Rani Paliwal</strong>.
-                  Located in Navratna Complex, Pulla Bhuwana, Udaipur,
+                  Located in   Shree Krishna, 1st floor , Near Shrinath Hospital , Navratna Complex Udaipur,
                   our club provides fitness, nutrition and group workout
                   experiences.
                 </p>

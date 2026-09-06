@@ -102,7 +102,7 @@ export default function AboutPage() {
             <div className="lg:col-span-6 relative">
               <div className="relative rounded-[32px] overflow-hidden border-4 border-white shadow-2xl bg-white max-w-md mx-auto">
                 <Image
-                  src="/rani2.jpg"
+                  src="/ranipaliwal1.jpg"
                   alt="Coach Rani Paliwal Portrait"
                   width={600}
                   height={720}

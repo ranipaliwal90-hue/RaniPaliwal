@@ -18,12 +18,10 @@ import { PROGRAMS } from '@/data/programs';
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-emerald-100/80 bg-gradient-to-b from-[#F4FBF7] to-[#E9F5EE] pb-12 pt-16">
+    <footer className="relative overflow-hidden border-t border-[#173A63] bg-[#08284D] pb-12 pt-16 text-white">
 
       {/* Decorative ambient glow */}
-
-      <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-emerald-200/20 blur-3xl" />
-
+      <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-blue-400/10 blur-3xl" />
 
       <Container
         size="large"
@@ -46,7 +44,6 @@ export default function Footer() {
               >
 
                 {/* RP LOGO */}
-
                 <div
                   className="
                     flex
@@ -59,7 +56,7 @@ export default function Footer() {
                     bg-[#0F5132]
                     shadow-md
                     ring-1
-                    ring-emerald-100
+                    ring-emerald-300/30
                   "
                 >
                   <span
@@ -74,16 +71,14 @@ export default function Footer() {
                   </span>
                 </div>
 
-
                 {/* BRAND TEXT */}
-
                 <div className="flex flex-col">
 
-                  <span className="text-2xl font-extrabold text-[#0F241A]">
+                  <span className="text-2xl font-extrabold text-white">
                     Rani Paliwal
                   </span>
 
-                  <span className="-mt-0.5 text-xs font-bold uppercase tracking-wider text-emerald-700">
+                  <span className="-mt-0.5 text-xs font-bold uppercase tracking-wider text-emerald-300">
                     ASN Certified Coach & Wellness Consultant
                   </span>
 
@@ -91,8 +86,7 @@ export default function Footer() {
 
               </Link>
 
-
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-gray-600">
+              <p className="mt-3 max-w-md text-sm leading-relaxed text-blue-100/80">
                 Empowering individuals through personalized nutrition,
                 fitness guidance, and sustainable lifestyle habits in
                 Udaipur, Rajasthan.
@@ -100,14 +94,13 @@ export default function Footer() {
 
             </div>
 
-
             {/* =========================
                 BEING FIT
             ========================== */}
 
-            <div className="flex max-w-md items-center gap-3.5 rounded-2xl border border-emerald-100 bg-white p-3.5 shadow-xs">
+            <div className="flex max-w-md items-center gap-3.5 rounded-2xl border border-white/10 bg-white/5 p-3.5 shadow-sm backdrop-blur-sm">
 
-              <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-emerald-100 bg-[#F6FBF7] p-1">
+              <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-white p-1">
 
                 <img
                   src="/being.png"
@@ -117,25 +110,23 @@ export default function Footer() {
 
               </div>
 
-
               <div className="flex flex-col">
 
-                <span className="text-[11px] font-bold uppercase tracking-wider text-gray-500">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-blue-200/70">
                   Associated Club
                 </span>
 
-                <span className="text-sm font-extrabold text-[#0F5132]">
+                <span className="text-sm font-extrabold text-white">
                   Being Fit — Nutrition & Fitness Club
                 </span>
 
-                <span className="text-xs font-medium text-gray-600">
+                <span className="text-xs font-medium text-blue-100/70">
                   Bhuwana, Udaipur
                 </span>
 
               </div>
 
             </div>
-
 
             {/* =========================
                 SOCIAL LINKS
@@ -144,7 +135,6 @@ export default function Footer() {
             <div className="flex flex-wrap items-center gap-3 pt-1">
 
               {/* Instagram */}
-
               <a
                 href="https://instagram.com/rani_paliwal?r=nametag"
                 target="_blank"
@@ -158,23 +148,21 @@ export default function Footer() {
                   justify-center
                   rounded-full
                   border
-                  border-emerald-200
-                  bg-white
-                  text-[#0F5132]
-                  shadow-xs
+                  border-white/20
+                  bg-white/5
+                  text-white
+                  shadow-sm
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:bg-[#0F5132]
-                  hover:text-white
+                  hover:bg-white
+                  hover:text-[#08284D]
                 "
               >
                 <InstagramIcon className="h-5 w-5" />
               </a>
 
-
               {/* Facebook */}
-
               <a
                 href="https://www.facebook.com/beingfit.asia"
                 target="_blank"
@@ -188,23 +176,21 @@ export default function Footer() {
                   justify-center
                   rounded-full
                   border
-                  border-emerald-200
-                  bg-white
-                  text-[#0F5132]
-                  shadow-xs
+                  border-white/20
+                  bg-white/5
+                  text-white
+                  shadow-sm
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:bg-[#0F5132]
-                  hover:text-white
+                  hover:bg-white
+                  hover:text-[#08284D]
                 "
               >
                 <FacebookIcon className="h-5 w-5" />
               </a>
 
-
               {/* LinkedIn */}
-
               <a
                 href="https://www.linkedin.com/in/rani-paliwal-4164b670/"
                 target="_blank"
@@ -218,15 +204,15 @@ export default function Footer() {
                   justify-center
                   rounded-full
                   border
-                  border-emerald-200
-                  bg-white
-                  text-[#0F5132]
-                  shadow-xs
+                  border-white/20
+                  bg-white/5
+                  text-white
+                  shadow-sm
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:bg-[#0F5132]
-                  hover:text-white
+                  hover:bg-white
+                  hover:text-[#08284D]
                 "
               >
                 <span className="text-sm font-black">
@@ -234,9 +220,7 @@ export default function Footer() {
                 </span>
               </a>
 
-
               {/* YouTube */}
-
               <a
                 href="https://www.youtube.com/@ranipaliwal3200"
                 target="_blank"
@@ -250,15 +234,15 @@ export default function Footer() {
                   justify-center
                   rounded-full
                   border
-                  border-emerald-200
-                  bg-white
-                  text-[#0F5132]
-                  shadow-xs
+                  border-white/20
+                  bg-white/5
+                  text-white
+                  shadow-sm
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:bg-[#0F5132]
-                  hover:text-white
+                  hover:bg-white
+                  hover:text-[#08284D]
                 "
               >
                 <span className="text-sm font-black">
@@ -266,9 +250,7 @@ export default function Footer() {
                 </span>
               </a>
 
-
               {/* WhatsApp */}
-
               <a
                 href={BRAND_INFO.whatsappUrl}
                 target="_blank"
@@ -282,14 +264,14 @@ export default function Footer() {
                   justify-center
                   rounded-full
                   border
-                  border-emerald-200
-                  bg-white
-                  text-emerald-600
-                  shadow-xs
+                  border-white/20
+                  bg-white/5
+                  text-emerald-300
+                  shadow-sm
                   transition-all
                   duration-300
                   hover:-translate-y-1
-                  hover:bg-emerald-600
+                  hover:bg-emerald-500
                   hover:text-white
                 "
               >
@@ -307,7 +289,7 @@ export default function Footer() {
 
           <div className="space-y-4">
 
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F5132]">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Quick Links
             </h4>
 
@@ -322,11 +304,11 @@ export default function Footer() {
                     className="
                       inline-block
                       font-semibold
-                      text-gray-600
-                      transition-transform
+                      text-blue-100/80
+                      transition-all
                       duration-200
                       hover:translate-x-1
-                      hover:text-[#0F5132]
+                      hover:text-white
                     "
                   >
                     {item.label}
@@ -347,7 +329,7 @@ export default function Footer() {
 
           <div className="space-y-4">
 
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F5132]">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Coaching Programs
             </h4>
 
@@ -362,11 +344,11 @@ export default function Footer() {
                     className="
                       inline-block
                       font-semibold
-                      text-gray-600
-                      transition-transform
+                      text-blue-100/80
+                      transition-all
                       duration-200
                       hover:translate-x-1
-                      hover:text-[#0F5132]
+                      hover:text-white
                     "
                   >
                     {prog.title}
@@ -387,20 +369,21 @@ export default function Footer() {
 
           <div className="space-y-4">
 
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0F5132]">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
               Contact & Location
             </h4>
 
-            <div className="space-y-3 text-sm text-gray-600">
+            <div className="space-y-3 text-sm text-blue-100/80">
 
               <div className="flex items-start gap-2.5">
 
-                <MapPin className="mt-1 h-4 w-4 shrink-0 text-emerald-600" />
+                <MapPin className="mt-1 h-4 w-4 shrink-0 text-emerald-300" />
 
                 <span>
-                  Udaipur, Rajasthan
+                  Being fit Nutriton and Fitness club
                   <br />
-                  (Being fit Nutrtion and Fitness Club)
+                  Shree Krishna, 1st floor, Near Shrinath hospital,
+                  Navratna complex, Udaipur Rajasthan
                 </span>
 
               </div>
@@ -408,11 +391,11 @@ export default function Footer() {
 
               <div className="flex items-center gap-2.5">
 
-                <Phone className="h-4 w-4 shrink-0 text-emerald-600" />
+                <Phone className="h-4 w-4 shrink-0 text-emerald-300" />
 
                 <a
                   href={`tel:${BRAND_INFO.phone}`}
-                  className="font-bold hover:text-[#0F5132]"
+                  className="font-bold text-white transition-colors hover:text-emerald-300"
                 >
                   {BRAND_INFO.displayPhone}
                 </a>
@@ -430,7 +413,21 @@ export default function Footer() {
             BOTTOM COPYRIGHT
         ========================== */}
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-emerald-200/60 pt-8 text-xs text-gray-500 md:flex-row">
+        <div
+          className="
+            flex
+            flex-col
+            items-center
+            justify-between
+            gap-4
+            border-t
+            border-white/10
+            pt-8
+            text-xs
+            text-blue-100/60
+            md:flex-row
+          "
+        >
 
           <p className="text-center md:text-left">
             © 2026 Rani Paliwal. All rights reserved
@@ -442,27 +439,17 @@ export default function Footer() {
 
             <Link
               href="/contact"
-              className="transition-colors hover:text-[#0F5132]"
+              className="transition-colors hover:text-white"
             >
               Privacy Policy
             </Link>
 
             <Link
               href="/contact"
-              className="transition-colors hover:text-[#0F5132]"
+              className="transition-colors hover:text-white"
             >
               Terms & Conditions
             </Link>
-
-            {/* <span className="flex items-center gap-1 font-semibold text-emerald-700">
-
-              Made with
-
-              <Heart className="inline h-3.5 w-3.5 fill-emerald-600 text-emerald-600" />
-
-              in Udaipur
-
-            </span> */}
 
           </div>
 

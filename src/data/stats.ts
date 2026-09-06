@@ -35,7 +35,7 @@ export const STATS: StatItem[] = [
     numericValue: 0,
     suffix: '',
     label: 'Based Coaching',
-    sublabel: 'Serving locally & globally online',
+    sublabel: 'Local And Global Coaching Both Coaching Available 95+ Countries',
     isTextOnly: true,
     textValue: 'Udaipur',
   },

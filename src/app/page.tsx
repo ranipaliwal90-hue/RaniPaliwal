@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PageTransition from '@/components/animations/PageTransition';
 import Hero from '@/components/home/Hero';
 import StatsSection from '@/components/home/StatsSection';

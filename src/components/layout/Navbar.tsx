@@ -66,7 +66,7 @@ export default function Navbar() {
     },
   
      {
-      label: 'Results',
+      label: 'Transformations',
       href: '/results',
       icon: Trophy,
     },

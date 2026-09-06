@@ -5,8 +5,8 @@ import { Users } from 'lucide-react';
 
 import PageTransition from '@/components/animations/PageTransition';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
 import LeafDecoration from '@/components/ui/LeafDecoration';
+import ApplyCoachButton from '@/components/coach/ApplyCoachButton';
 import { COACH_PILLARS, TEAM_GALLERY } from '@/data/coach';
 
 export const metadata: Metadata = {
@@ -33,7 +33,9 @@ export default function BecomeACoachPage() {
 
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
 
-            {/* LEFT CONTENT */}
+            {/* =================================================
+                LEFT CONTENT
+            ================================================= */}
             <div className="flex flex-col items-start lg:col-span-7">
 
               <h1 className="mt-4 mb-4 text-4xl font-extrabold tracking-tight text-[#0F241A] sm:text-5xl lg:text-6xl">
@@ -69,14 +71,8 @@ export default function BecomeACoachPage() {
 
               </div>
 
-              <Button
-                href="/contact"
-                variant="primary"
-                size="lg"
-                showArrow
-              >
-                Apply to Join Our Team
-              </Button>
+              {/* APPLY BUTTON + MODAL */}
+              <ApplyCoachButton />
 
             </div>
 
@@ -266,7 +262,6 @@ export default function BecomeACoachPage() {
 
         {/* =====================================================
             SLIDER CSS
-            Normal style tag - NO styled-jsx
         ===================================================== */}
         <style>
           {`

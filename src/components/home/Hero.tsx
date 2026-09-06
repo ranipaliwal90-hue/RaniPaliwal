@@ -339,7 +339,7 @@ export default function Hero() {
               >
 
                 <Image
-                  src="/rani22.jpg"
+                  src="/ranipaliwal1.jpg"
                   alt="Coach Rani Paliwal Health & Wellness Consultant"
                   width={600}
                   height={750}
