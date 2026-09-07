@@ -69,7 +69,6 @@ export default function ApplyCoachModal({
           area: formData.area,
           phone: formData.phone,
           previousWork: formData.previousWork,
-          workType: formData.workPreference,
           workPreference: formData.workPreference,
           careerReason: formData.careerGoal,
         }),
@@ -305,7 +304,7 @@ export default function ApplyCoachModal({
                     htmlFor="workPreference"
                     className="mb-2 block text-sm font-bold text-[#0F241A]"
                   >
-                    Work Preference
+                   What is your Goal
                   </label>
 
                   <div className="relative">
@@ -323,12 +322,20 @@ export default function ApplyCoachModal({
                         Select work preference
                       </option>
 
-                      <option value="Part Time">Part Time</option>
+                      <option value="Career Building">
+                        Career Building
+                      </option>
 
-                      <option value="Full Time">Full Time</option>
+                      <option value="Part Time Business">
+                        Part Time Business
+                      </option>
 
-                      <option value="Work From Home">
-                        Work From Home
+                      <option value="Lifestyle Improvement">
+                        Lifestyle Improvement
+                      </option>
+
+                      <option value="Other">
+                        Other
                       </option>
                     </select>
                   </div>

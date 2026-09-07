@@ -158,7 +158,7 @@ export default function Navbar() {
 
               <div className="flex min-w-0 flex-col">
              <p className="mb-1 text-[9px] font-medium text-emerald-800 sm:text-[10px]">
-  Local & Remote Worldwide • Since 2012
+  Since 2014
 </p>
                 <span className="whitespace-nowrap text-[20px] font-extrabold leading-none tracking-[-0.03em] text-[#0F241A] transition-colors duration-200 group-hover:text-[#0F5132]">
                   Rani Paliwal

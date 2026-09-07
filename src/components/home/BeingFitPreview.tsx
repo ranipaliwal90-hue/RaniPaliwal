@@ -49,9 +49,14 @@ export default function BeingFitPreview() {
               {CLUB_INFO.subtitle}
             </p>
 
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-              Being Fit is the fitness and nutrition club associated with <strong>Rani Paliwal</strong>, providing an empowering physical environment for strength training, group fitness, and healthier lifestyle practices in Udaipur.
-            </p>
+           <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+  At Being Fit, we help you live a truly holistic lifestyle by focusing on
+  your <strong>mental and physical health</strong>. Our goal is to help you
+  achieve your health and wellness goals through the right guidance, healthy
+  habits, and consistent support. We also provide a <strong>healthy
+  breakfast</strong> and <strong>personalised consultation</strong> to help
+  you take better care of your overall well-being.
+</p>
 
             {/* Location Pill */}
             <div className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-emerald-50 text-[#0F5132] font-semibold text-sm mb-8 border border-emerald-100">
