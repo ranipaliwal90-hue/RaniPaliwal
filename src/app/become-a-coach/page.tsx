@@ -92,7 +92,7 @@ export default function BecomeACoachPage() {
                 </h1>
 
                 <p className="mb-3 text-sm font-bold text-emerald-700 sm:text-base">
-                  Udaipur & Remote Worldwide • Since 2012
+                  Udaipur & Remote Worldwide
                 </p>
 
                 <p className="mb-8 text-base leading-relaxed text-gray-600 sm:text-lg">

@@ -123,6 +123,18 @@ export default function BeingFitPage() {
                       </div>
 
                     </div>
+
+                    {/* ==================================================
+                        BOOK FREE EXPERIENCE DAY BUTTON
+                    ================================================== */}
+
+                    <a
+                      href="/contact"
+                      className="inline-flex items-center justify-center rounded-full bg-[#0F5132] px-6 py-3 text-sm font-extrabold text-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:bg-[#0B4329] hover:shadow-lg sm:text-base"
+                    >
+                      Book Your Free Experience Day
+                    </a>
+
                   </div>
 
                 </div>

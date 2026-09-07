@@ -18,7 +18,6 @@ export async function POST(request: Request) {
       area,
       phone,
       previousWork,
-      workType,
       workPreference,
       careerReason,
     } = body;
@@ -56,8 +55,6 @@ Phone: ${phone}
 Previous Work:
 ${previousWork || 'Not provided'}
 
-Work Type:
-${workType || 'Not provided'}
 
 Work Preference:
 ${workPreference || 'Not provided'}
@@ -111,11 +108,7 @@ Submitted from the Rani Paliwal / Being Fit website.
             ${previousWork || 'Not provided'}
           </p>
 
-          <p>
-            <strong>Work Type:</strong><br />
-            ${workType || 'Not provided'}
-          </p>
-
+  
           <p>
             <strong>Work Preference:</strong><br />
             ${workPreference || 'Not provided'}
